@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raj Shakya — Google Workspace & Cloud Infrastructure Expert</title>
-    <meta name="description" content="13+ years helping US businesses migrate, automate, and scale with Google Workspace, AWS, GCP, and DevOps. 20,000+ users migrated. Zero downtime.">
+    <title>Raj Shakya — Google Workspace, Cloud & Automation Expert | rajshakya.dev</title>
+    <meta name="description" content="13+ years helping US businesses migrate, automate, and scale with Google Workspace, AppSheet, Apps Script, AWS, GCP, and DevOps. 20,000+ users migrated. Zero downtime.">
+    <meta property="og:title" content="Raj Shakya — Google Workspace, Cloud & Automation Expert">
+    <meta property="og:description" content="I migrate, automate & fix Google Workspace for US businesses. 13+ years, 20K+ users migrated, 300+ automations built.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rajshakya.dev">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-primary: #0a0a0b;
@@ -17,615 +21,346 @@
             --border: #2a2a30;
             --border-subtle: #1e1e24;
             --text-primary: #f0efe9;
-            --text-secondary: #9a9a9f;
+            --text-secondary: #a0a0a5;
             --text-muted: #6b6b72;
             --accent: #4ade80;
             --accent-dim: #22c55e;
             --accent-glow: rgba(74, 222, 128, 0.15);
             --accent-secondary: #38bdf8;
             --amber: #fbbf24;
+            --purple: #a78bfa;
+            --orange: #fb923c;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: 'DM Sans', sans-serif;
             background: var(--bg-primary);
             color: var(--text-primary);
-            line-height: 1.6;
+            line-height: 1.7;
             -webkit-font-smoothing: antialiased;
+            font-size: 17px;
         }
 
-        /* Grain overlay */
         body::after {
             content: '';
             position: fixed;
             top: 0; left: 0; right: 0; bottom: 0;
             pointer-events: none;
-            opacity: 0.025;
+            opacity: 0.02;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
             z-index: 9999;
         }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
 
         /* NAV */
         nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100;
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
             padding: 18px 0;
-            background: rgba(10, 10, 11, 0.8);
+            background: rgba(10, 10, 11, 0.85);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border-subtle);
         }
-
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
+        nav .container { display: flex; justify-content: space-between; align-items: center; }
         .nav-logo {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 15px;
-            font-weight: 500;
-            color: var(--text-primary);
-            text-decoration: none;
-            letter-spacing: -0.5px;
+            font-size: 16px; font-weight: 500;
+            color: var(--text-primary); text-decoration: none; letter-spacing: -0.5px;
         }
-
-        .nav-logo span {
-            color: var(--accent);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            list-style: none;
-        }
-
+        .nav-logo span { color: var(--accent); }
+        .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
         .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 400;
-            transition: color 0.2s;
+            color: var(--text-secondary); text-decoration: none;
+            font-size: 15px; font-weight: 400; transition: color 0.2s;
         }
-
-        .nav-links a:hover {
-            color: var(--text-primary);
-        }
-
+        .nav-links a:hover { color: var(--text-primary); }
         .nav-cta {
-            background: var(--accent);
-            color: var(--bg-primary) !important;
-            padding: 8px 20px;
-            border-radius: 6px;
-            font-weight: 600 !important;
+            background: var(--accent) !important; color: var(--bg-primary) !important;
+            padding: 10px 22px !important; border-radius: 8px; font-weight: 600 !important;
             transition: transform 0.2s, box-shadow 0.2s !important;
         }
+        .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 20px var(--accent-glow); }
 
-        .nav-cta:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 20px var(--accent-glow);
+        .mobile-menu-btn {
+            display: none; background: none; border: none;
+            color: var(--text-primary); font-size: 26px; cursor: pointer;
         }
 
         /* HERO */
         .hero {
-            padding: 160px 0 100px;
-            position: relative;
-            overflow: hidden;
+            padding: 180px 0 120px;
+            position: relative; overflow: hidden;
         }
-
         .hero::before {
             content: '';
-            position: absolute;
-            top: -200px;
-            right: -200px;
-            width: 600px;
-            height: 600px;
+            position: absolute; top: -300px; right: -300px;
+            width: 800px; height: 800px;
             background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero::after {
+            content: '';
+            position: absolute; bottom: -200px; left: -200px;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, transparent 70%);
             pointer-events: none;
         }
 
         .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 6px 14px;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 8px 18px;
+            background: var(--bg-card); border: 1px solid var(--border);
             border-radius: 100px;
-            font-size: 13px;
-            color: var(--accent);
-            font-weight: 500;
-            margin-bottom: 32px;
+            font-size: 14px; color: var(--accent); font-weight: 500;
+            margin-bottom: 36px;
             animation: fadeInUp 0.6s ease;
         }
-
         .hero-badge::before {
-            content: '';
-            width: 7px;
-            height: 7px;
-            background: var(--accent);
-            border-radius: 50%;
+            content: ''; width: 8px; height: 8px;
+            background: var(--accent); border-radius: 50%;
             animation: pulse 2s infinite;
         }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.4; }
-        }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 
         .hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(40px, 6vw, 72px);
-            font-weight: 700;
-            line-height: 1.05;
-            letter-spacing: -2px;
-            margin-bottom: 24px;
+            font-size: clamp(48px, 7vw, 86px);
+            font-weight: 800; line-height: 1.05;
+            letter-spacing: -3px; margin-bottom: 28px;
             animation: fadeInUp 0.6s ease 0.1s both;
         }
-
         .hero h1 .highlight {
             background: linear-gradient(135deg, var(--accent) 0%, var(--accent-secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
         }
-
         .hero-sub {
-            font-size: 18px;
-            color: var(--text-secondary);
-            max-width: 560px;
-            line-height: 1.7;
-            margin-bottom: 40px;
+            font-size: 21px; color: var(--text-secondary);
+            max-width: 640px; line-height: 1.8; margin-bottom: 44px;
             animation: fadeInUp 0.6s ease 0.2s both;
         }
-
         .hero-actions {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
+            display: flex; gap: 16px; flex-wrap: wrap;
             animation: fadeInUp 0.6s ease 0.3s both;
         }
-
         .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 14px 28px;
-            background: var(--accent);
-            color: var(--bg-primary);
-            border: none;
-            border-radius: 8px;
-            font-size: 15px;
-            font-weight: 600;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.2s;
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 16px 32px; background: var(--accent); color: var(--bg-primary);
+            border: none; border-radius: 10px;
+            font-size: 17px; font-weight: 600;
+            text-decoration: none; cursor: pointer; transition: all 0.2s;
         }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px var(--accent-glow);
-        }
-
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px var(--accent-glow); }
         .btn-secondary {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 14px 28px;
-            background: transparent;
-            color: var(--text-primary);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            font-size: 15px;
-            font-weight: 500;
-            text-decoration: none;
-            transition: all 0.2s;
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 16px 32px; background: transparent; color: var(--text-primary);
+            border: 1px solid var(--border); border-radius: 10px;
+            font-size: 17px; font-weight: 500; text-decoration: none; transition: all 0.2s;
         }
-
-        .btn-secondary:hover {
-            border-color: var(--text-muted);
-            background: var(--bg-card);
-        }
+        .btn-secondary:hover { border-color: var(--text-muted); background: var(--bg-card); }
 
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(24px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         /* STATS */
         .stats {
-            padding: 60px 0;
+            padding: 70px 0;
             border-top: 1px solid var(--border-subtle);
             border-bottom: 1px solid var(--border-subtle);
         }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 20px;
-            position: relative;
-        }
-
+        .stats-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; }
+        .stat-item { text-align: center; padding: 24px 16px; position: relative; }
         .stat-item:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 20%;
-            height: 60%;
-            width: 1px;
+            content: ''; position: absolute; right: 0; top: 20%; height: 60%; width: 1px;
             background: var(--border);
         }
-
         .stat-number {
             font-family: 'JetBrains Mono', monospace;
-            font-size: clamp(28px, 4vw, 40px);
-            font-weight: 500;
-            color: var(--text-primary);
-            letter-spacing: -1px;
+            font-size: clamp(34px, 4.5vw, 50px);
+            font-weight: 500; color: var(--text-primary); letter-spacing: -1px;
         }
-
-        .stat-number span {
-            color: var(--accent);
-        }
-
+        .stat-number span { color: var(--accent); }
         .stat-label {
-            font-size: 13px;
-            color: var(--text-muted);
-            margin-top: 6px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
+            font-size: 13px; color: var(--text-muted); margin-top: 8px;
+            text-transform: uppercase; letter-spacing: 2px;
+        }
+
+        /* SECTION STYLES */
+        .section-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px; color: var(--accent);
+            text-transform: uppercase; letter-spacing: 3px; margin-bottom: 16px;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(34px, 4.5vw, 52px);
+            font-weight: 700; letter-spacing: -1.5px; margin-bottom: 20px;
+        }
+        .section-desc {
+            font-size: 19px; color: var(--text-secondary); max-width: 640px; margin-bottom: 60px; line-height: 1.7;
         }
 
         /* SERVICES */
-        .services {
-            padding: 100px 0;
-        }
-
-        .section-label {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 12px;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 16px;
-        }
-
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(28px, 4vw, 42px);
-            font-weight: 600;
-            letter-spacing: -1px;
-            margin-bottom: 60px;
-        }
-
+        .services { padding: 120px 0; }
         .services-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
         }
-
         .service-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 12px;
-            padding: 36px;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
+            background: var(--bg-card); border: 1px solid var(--border-subtle);
+            border-radius: 14px; padding: 36px;
+            transition: all 0.3s; position: relative; overflow: hidden;
         }
-
         .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
             background: linear-gradient(90deg, var(--accent), transparent);
-            opacity: 0;
-            transition: opacity 0.3s;
+            opacity: 0; transition: opacity 0.3s;
         }
-
-        .service-card:hover {
-            border-color: var(--border);
-            background: var(--bg-card-hover);
-            transform: translateY(-2px);
-        }
-
-        .service-card:hover::before {
-            opacity: 1;
-        }
-
+        .service-card:hover { border-color: var(--border); background: var(--bg-card-hover); transform: translateY(-3px); }
+        .service-card:hover::before { opacity: 1; }
         .service-icon {
-            width: 44px;
-            height: 44px;
-            background: var(--accent-glow);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            font-size: 20px;
+            width: 52px; height: 52px; background: var(--accent-glow);
+            border-radius: 12px; display: flex; align-items: center; justify-content: center;
+            margin-bottom: 22px; font-size: 24px;
         }
-
-        .service-card h3 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .service-card p {
-            font-size: 14px;
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-
-        .service-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-top: 16px;
-        }
-
+        .service-card h3 { font-size: 21px; font-weight: 600; margin-bottom: 12px; }
+        .service-card p { font-size: 15px; color: var(--text-secondary); line-height: 1.7; }
+        .service-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
         .service-tag {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 11px;
-            padding: 4px 10px;
-            background: rgba(74, 222, 128, 0.08);
-            color: var(--accent);
-            border-radius: 4px;
+            font-family: 'JetBrains Mono', monospace; font-size: 11px;
+            padding: 5px 11px; background: rgba(74, 222, 128, 0.08);
+            color: var(--accent); border-radius: 5px;
             border: 1px solid rgba(74, 222, 128, 0.15);
         }
+        .service-tag.blue { background: rgba(56, 189, 248, 0.08); color: var(--accent-secondary); border-color: rgba(56, 189, 248, 0.15); }
+        .service-tag.purple { background: rgba(167, 139, 250, 0.08); color: var(--purple); border-color: rgba(167, 139, 250, 0.15); }
+        .service-tag.orange { background: rgba(251, 146, 60, 0.08); color: var(--orange); border-color: rgba(251, 146, 60, 0.15); }
 
-        /* RESULTS */
-        .results {
-            padding: 100px 0;
+        /* INDUSTRIES */
+        .industries {
+            padding: 120px 0;
             background: var(--bg-secondary);
             border-top: 1px solid var(--border-subtle);
             border-bottom: 1px solid var(--border-subtle);
         }
-
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 60px;
+        .industries-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
         }
+        .industry-card {
+            background: var(--bg-card); border: 1px solid var(--border-subtle);
+            border-radius: 12px; padding: 28px; text-align: center;
+            transition: all 0.3s;
+        }
+        .industry-card:hover { border-color: var(--border); transform: translateY(-2px); }
+        .industry-icon { font-size: 36px; margin-bottom: 14px; }
+        .industry-name { font-size: 17px; font-weight: 600; margin-bottom: 6px; }
+        .industry-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
 
+        /* RESULTS */
+        .results { padding: 120px 0; }
+        .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
         .result-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 12px;
-            padding: 32px;
+            background: var(--bg-card); border: 1px solid var(--border-subtle);
+            border-radius: 14px; padding: 36px;
         }
-
         .result-metric {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 32px;
-            font-weight: 500;
-            color: var(--accent);
-            margin-bottom: 8px;
+            font-size: 40px; font-weight: 500; color: var(--accent); margin-bottom: 10px;
         }
-
-        .result-title {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .result-desc {
-            font-size: 13px;
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
+        .result-title { font-size: 19px; font-weight: 600; margin-bottom: 10px; }
+        .result-desc { font-size: 15px; color: var(--text-secondary); line-height: 1.7; }
 
         /* PLATFORMS */
         .platforms {
-            padding: 100px 0;
+            padding: 120px 0;
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
         }
-
-        .platform-logos {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            margin-top: 40px;
-        }
-
+        .platform-logos { display: flex; flex-wrap: wrap; gap: 14px; }
         .platform-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 22px;
-            background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 10px;
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--text-secondary);
+            display: flex; align-items: center; gap: 10px;
+            padding: 14px 24px; background: var(--bg-card);
+            border: 1px solid var(--border-subtle); border-radius: 10px;
+            font-size: 15px; font-weight: 500; color: var(--text-secondary);
             transition: all 0.2s;
         }
-
-        .platform-item:hover {
-            border-color: var(--border);
-            color: var(--text-primary);
-        }
-
-        .platform-item svg {
-            width: 20px;
-            height: 20px;
-            flex-shrink: 0;
-        }
+        .platform-item:hover { border-color: var(--border); color: var(--text-primary); }
+        .platform-item .p-icon { font-size: 20px; }
 
         /* TRUST */
-        .trust {
-            padding: 80px 0;
-            border-top: 1px solid var(--border-subtle);
-        }
-
-        .trust-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            text-align: center;
-        }
-
-        .trust-item {
-            padding: 20px;
-        }
-
-        .trust-icon {
-            font-size: 28px;
-            margin-bottom: 16px;
-        }
-
-        .trust-title {
-            font-size: 15px;
-            font-weight: 600;
-            margin-bottom: 6px;
-        }
-
-        .trust-desc {
-            font-size: 13px;
-            color: var(--text-muted);
-        }
+        .trust { padding: 100px 0; }
+        .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; text-align: center; }
+        .trust-item { padding: 24px; }
+        .trust-icon { font-size: 34px; margin-bottom: 16px; }
+        .trust-title { font-size: 17px; font-weight: 600; margin-bottom: 8px; }
+        .trust-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
 
         /* CTA */
         .cta {
-            padding: 100px 0;
-            text-align: center;
-            position: relative;
+            padding: 120px 0; text-align: center; position: relative;
         }
-
         .cta::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 800px;
-            height: 400px;
+            content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+            width: 900px; height: 450px;
             background: radial-gradient(ellipse, var(--accent-glow) 0%, transparent 70%);
             pointer-events: none;
         }
-
         .cta h2 {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(28px, 4vw, 48px);
-            font-weight: 600;
-            letter-spacing: -1px;
-            margin-bottom: 16px;
+            font-size: clamp(34px, 4.5vw, 56px);
+            font-weight: 700; letter-spacing: -1.5px; margin-bottom: 18px;
         }
-
         .cta p {
-            color: var(--text-secondary);
-            font-size: 17px;
-            margin-bottom: 40px;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
+            color: var(--text-secondary); font-size: 20px; margin-bottom: 44px;
+            max-width: 560px; margin-left: auto; margin-right: auto; line-height: 1.7;
         }
-
         .cta-email {
             font-family: 'JetBrains Mono', monospace;
-            font-size: 15px;
-            color: var(--text-muted);
-            margin-top: 20px;
+            font-size: 15px; color: var(--text-muted); margin-top: 24px;
         }
-
-        .cta-email a {
-            color: var(--accent);
-            text-decoration: none;
-        }
+        .cta-email a { color: var(--accent); text-decoration: none; }
+        .cta-email a:hover { text-decoration: underline; }
 
         /* FOOTER */
         footer {
-            padding: 40px 0;
+            padding: 44px 0;
             border-top: 1px solid var(--border-subtle);
         }
-
-        footer .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .footer-text {
-            font-size: 13px;
-            color: var(--text-muted);
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 24px;
-        }
-
+        footer .container { display: flex; justify-content: space-between; align-items: center; }
+        .footer-text { font-size: 14px; color: var(--text-muted); }
+        .footer-links { display: flex; gap: 28px; }
         .footer-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 13px;
-            transition: color 0.2s;
+            color: var(--text-muted); text-decoration: none; font-size: 14px; transition: color 0.2s;
         }
-
-        .footer-links a:hover {
-            color: var(--text-primary);
-        }
-
-        /* MOBILE */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--text-primary);
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .mobile-menu-btn { display: block; }
-            .stats-grid { grid-template-columns: repeat(2, 1fr); }
-            .stat-item:nth-child(2)::after { display: none; }
-            .services-grid { grid-template-columns: 1fr; }
-            .results-grid { grid-template-columns: 1fr; }
-            .trust-grid { grid-template-columns: 1fr; gap: 20px; }
-            .hero { padding: 120px 0 60px; }
-            footer .container { flex-direction: column; gap: 16px; text-align: center; }
-        }
+        .footer-links a:hover { color: var(--text-primary); }
 
         /* SCROLL ANIMATIONS */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(24px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
+        .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+        /* MOBILE */
+        @media (max-width: 1024px) {
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .industries-grid { grid-template-columns: repeat(3, 1fr); }
+            .trust-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; position: absolute; top: 60px; left: 0; right: 0; background: var(--bg-primary); border-bottom: 1px solid var(--border); flex-direction: column; padding: 20px; gap: 16px; }
+            .nav-links.open { display: flex; }
+            .mobile-menu-btn { display: block; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .stat-item:nth-child(2)::after,
+            .stat-item:nth-child(4)::after { display: none; }
+            .services-grid { grid-template-columns: 1fr; }
+            .industries-grid { grid-template-columns: repeat(2, 1fr); }
+            .results-grid { grid-template-columns: 1fr; }
+            .trust-grid { grid-template-columns: 1fr; gap: 16px; }
+            .hero { padding: 130px 0 70px; }
+            footer .container { flex-direction: column; gap: 16px; text-align: center; }
         }
     </style>
 </head>
@@ -635,13 +370,14 @@
     <nav>
         <div class="container">
             <a href="#" class="nav-logo">raj<span>.</span>shakya<span>.dev</span></a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#services">Services</a></li>
+                <li><a href="#industries">Industries</a></li>
                 <li><a href="#results">Results</a></li>
                 <li><a href="#platforms">Stack</a></li>
                 <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
             </ul>
-            <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').style.display = document.querySelector('.nav-links').style.display === 'flex' ? 'none' : 'flex'" aria-label="Menu">☰</button>
+            <button class="mobile-menu-btn" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">☰</button>
         </div>
     </nav>
 
@@ -650,10 +386,10 @@
         <div class="container">
             <div class="hero-badge">Available for projects</div>
             <h1>I migrate, automate<br>& fix <span class="highlight">Google<br>Workspace</span></h1>
-            <p class="hero-sub">13+ years helping US businesses migrate thousands of users, automate manual work, and build reliable cloud infrastructure — with zero downtime.</p>
+            <p class="hero-sub">13+ years helping US businesses migrate thousands of users, automate manual work, build custom apps, and run reliable cloud infrastructure — with zero downtime.</p>
             <div class="hero-actions">
                 <a href="#contact" class="btn-primary">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                     Get in Touch
                 </a>
                 <a href="#results" class="btn-secondary">See My Work →</a>
@@ -678,6 +414,10 @@
                     <div class="stat-label">Automations Built</div>
                 </div>
                 <div class="stat-item fade-in">
+                    <div class="stat-number">211<span>+</span></div>
+                    <div class="stat-label">Projects Delivered</div>
+                </div>
+                <div class="stat-item fade-in">
                     <div class="stat-number">100<span>%</span></div>
                     <div class="stat-label">Job Success</div>
                 </div>
@@ -690,33 +430,86 @@
         <div class="container">
             <div class="section-label">What I Do</div>
             <h2 class="section-title">Services that keep your<br>business running smoothly</h2>
+            <div class="section-desc">From email migrations to custom automation apps — I handle the entire stack so your team can focus on what matters.</div>
             <div class="services-grid">
+
                 <div class="service-card fade-in">
                     <div class="service-icon">📧</div>
-                    <h3>Google Workspace Migrations</h3>
-                    <p>Seamless migrations from Office 365, Exchange, cPanel, or any mail platform to Google Workspace. Zero downtime, zero data loss.</p>
+                    <h3>Migrate to Google Workspace</h3>
+                    <p>Seamless migrations from Office 365, Exchange, cPanel, Zimbra, Lotus Notes, or any mail platform to Google Workspace. Zero downtime, zero data loss.</p>
                     <div class="service-tags">
                         <span class="service-tag">Office 365</span>
                         <span class="service-tag">Exchange</span>
                         <span class="service-tag">cPanel</span>
-                        <span class="service-tag">IMAP</span>
+                        <span class="service-tag">Zimbra</span>
+                        <span class="service-tag">IMAP/POP</span>
                     </div>
                 </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">🔄</div>
+                    <h3>Migrate to Office 365</h3>
+                    <p>Moving from Google Workspace to Microsoft 365? I handle full mailbox, calendar, contacts, and drive migrations with complete data integrity and zero disruption.</p>
+                    <div class="service-tags">
+                        <span class="service-tag blue">Google → O365</span>
+                        <span class="service-tag blue">Exchange Online</span>
+                        <span class="service-tag blue">SharePoint</span>
+                        <span class="service-tag blue">Teams</span>
+                    </div>
+                </div>
+
                 <div class="service-card fade-in">
                     <div class="service-icon">⚡</div>
                     <h3>Workflow Automation</h3>
-                    <p>Replace manual busywork with smart automation using Apps Script, AppSheet, and API integrations. Teams save 10–25 hours per week.</p>
+                    <p>Replace manual busywork with smart automation using Apps Script, AppSheet, Zapier, and API integrations. Teams save 10–25 hours per week.</p>
                     <div class="service-tags">
                         <span class="service-tag">Apps Script</span>
-                        <span class="service-tag">AppSheet</span>
+                        <span class="service-tag">Zapier</span>
+                        <span class="service-tag">Make</span>
                         <span class="service-tag">APIs</span>
-                        <span class="service-tag">Sheets</span>
                     </div>
                 </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">📱</div>
+                    <h3>AppSheet Apps & Automation</h3>
+                    <p>Build custom no-code business apps with AppSheet — CRMs, inventory trackers, field service apps, approval workflows, and automated reporting dashboards.</p>
+                    <div class="service-tags">
+                        <span class="service-tag purple">AppSheet</span>
+                        <span class="service-tag purple">Web Apps</span>
+                        <span class="service-tag purple">Mobile Apps</span>
+                        <span class="service-tag purple">Workflows</span>
+                    </div>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">📊</div>
+                    <h3>Google Sheets Automation</h3>
+                    <p>Transform Google Sheets into powerful business tools — automated reports, custom functions, data pipelines, dashboards, and integrations with your existing systems.</p>
+                    <div class="service-tags">
+                        <span class="service-tag">Sheets</span>
+                        <span class="service-tag">Apps Script</span>
+                        <span class="service-tag">Formulas</span>
+                        <span class="service-tag">Macros</span>
+                    </div>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">📈</div>
+                    <h3>Data Analytics & Dashboards</h3>
+                    <p>Turn raw data into actionable insights with Looker Studio, Google Sheets, and BigQuery. Custom dashboards, automated reports, and data visualization.</p>
+                    <div class="service-tags">
+                        <span class="service-tag orange">Looker Studio</span>
+                        <span class="service-tag orange">BigQuery</span>
+                        <span class="service-tag orange">Analytics</span>
+                        <span class="service-tag orange">Reports</span>
+                    </div>
+                </div>
+
                 <div class="service-card fade-in">
                     <div class="service-icon">🔧</div>
                     <h3>Email Deliverability & Security</h3>
-                    <p>Fix emails landing in spam, configure MX, SPF, DKIM, DMARC, set up routing rules, and lock down access controls and audits.</p>
+                    <p>Fix emails landing in spam, configure MX, SPF, DKIM, DMARC, set up routing rules, and lock down access controls, audits, and compliance.</p>
                     <div class="service-tags">
                         <span class="service-tag">SPF</span>
                         <span class="service-tag">DKIM</span>
@@ -724,16 +517,101 @@
                         <span class="service-tag">Routing</span>
                     </div>
                 </div>
+
                 <div class="service-card fade-in">
                     <div class="service-icon">☁️</div>
                     <h3>Cloud Infrastructure & DevOps</h3>
-                    <p>Design, deploy, and manage scalable cloud infrastructure on AWS, GCP, Azure, and DigitalOcean. CI/CD pipelines, monitoring, and security.</p>
+                    <p>Design, deploy, and manage scalable cloud infrastructure on AWS, GCP, Azure, and DigitalOcean. CI/CD pipelines, monitoring, security, and cost optimization.</p>
                     <div class="service-tags">
-                        <span class="service-tag">AWS</span>
-                        <span class="service-tag">GCP</span>
-                        <span class="service-tag">Azure</span>
-                        <span class="service-tag">CI/CD</span>
+                        <span class="service-tag blue">AWS</span>
+                        <span class="service-tag blue">GCP</span>
+                        <span class="service-tag blue">Azure</span>
+                        <span class="service-tag blue">CI/CD</span>
                     </div>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">🛠️</div>
+                    <h3>Server & Hosting Management</h3>
+                    <p>Full server administration for cPanel/WHM, Plesk, Webmin, VPS, and dedicated servers. SSL setup, backups, security hardening, and performance tuning.</p>
+                    <div class="service-tags">
+                        <span class="service-tag">cPanel/WHM</span>
+                        <span class="service-tag">Plesk</span>
+                        <span class="service-tag">VPS</span>
+                        <span class="service-tag">SSL</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section class="industries" id="industries">
+        <div class="container">
+            <div class="section-label">Industries I Serve</div>
+            <h2 class="section-title">Trusted by businesses<br>across every sector</h2>
+            <div class="section-desc">From startups to enterprise — I've delivered solutions for companies across these industries.</div>
+            <div class="industries-grid">
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">🏥</div>
+                    <div class="industry-name">Healthcare</div>
+                    <div class="industry-desc">HIPAA-compliant migrations, secure email, and automation for clinics & hospitals</div>
+                </div>
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">🎓</div>
+                    <div class="industry-name">Education</div>
+                    <div class="industry-desc">Workspace for Education deployments, LMS integrations, and admin automation</div>
+                </div>
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">💰</div>
+                    <div class="industry-name">Finance & Banking</div>
+                    <div class="industry-desc">Secure cloud infrastructure, compliance setups, and automated reporting</div>
+                </div>
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">🛒</div>
+                    <div class="industry-name">E-Commerce & Retail</div>
+                    <div class="industry-desc">Inventory automation, order tracking apps, and multi-platform integrations</div>
+                </div>
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">⚖️</div>
+                    <div class="industry-name">Legal</div>
+                    <div class="industry-desc">Document management, secure email routing, and workflow automation</div>
+                </div>
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">🏗️</div>
+                    <div class="industry-name">Construction</div>
+                    <div class="industry-desc">Field service apps, project tracking with AppSheet, and team collaboration</div>
+                </div>
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">🏢</div>
+                    <div class="industry-name">Real Estate</div>
+                    <div class="industry-desc">CRM automation, lead tracking, property management apps, and reporting</div>
+                </div>
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">🚀</div>
+                    <div class="industry-name">SaaS & Startups</div>
+                    <div class="industry-desc">Cloud setup from scratch, DevOps pipelines, scaling, and automation</div>
+                </div>
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">🏭</div>
+                    <div class="industry-name">Manufacturing</div>
+                    <div class="industry-desc">Production tracking, quality control apps, and supply chain automation</div>
+                </div>
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">🏨</div>
+                    <div class="industry-name">Hospitality</div>
+                    <div class="industry-desc">Booking automation, guest management, multi-location workspace setup</div>
+                </div>
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">📡</div>
+                    <div class="industry-name">Media & Marketing</div>
+                    <div class="industry-desc">Campaign automation, analytics dashboards, content workflow tools</div>
+                </div>
+                <div class="industry-card fade-in">
+                    <div class="industry-icon">🏛️</div>
+                    <div class="industry-name">Government & NGO</div>
+                    <div class="industry-desc">Large-scale migrations, security compliance, and citizen service automation</div>
                 </div>
             </div>
         </div>
@@ -744,21 +622,22 @@
         <div class="container">
             <div class="section-label">Proven Results</div>
             <h2 class="section-title">Numbers that speak<br>for themselves</h2>
+            <div class="section-desc">Every project is backed by real outcomes, not empty promises.</div>
             <div class="results-grid">
                 <div class="result-card fade-in">
                     <div class="result-metric">20,000+</div>
                     <div class="result-title">Users Migrated</div>
-                    <div class="result-desc">Migrated entire organizations from Office 365, Exchange, and cPanel to Google Workspace — with zero downtime and complete data integrity.</div>
+                    <div class="result-desc">Migrated entire organizations from Office 365, Exchange, cPanel, and legacy systems to Google Workspace — with zero downtime and complete data integrity.</div>
                 </div>
                 <div class="result-card fade-in">
-                    <div class="result-metric">211</div>
+                    <div class="result-metric">211+</div>
                     <div class="result-title">Projects Delivered</div>
-                    <div class="result-desc">Across migrations, automations, cloud setups, and custom development — with a 100% job success rate and Top Rated Plus status.</div>
+                    <div class="result-desc">Across migrations, automations, AppSheet apps, cloud setups, and custom development — with a 100% job success rate and Top Rated Plus status.</div>
                 </div>
                 <div class="result-card fade-in">
                     <div class="result-metric">10-25 hrs</div>
                     <div class="result-title">Saved Per Week</div>
-                    <div class="result-desc">Teams consistently save 10–25 hours per week after implementing custom automation workflows with Apps Script and AppSheet.</div>
+                    <div class="result-desc">Teams consistently save 10–25 hours weekly after implementing custom automation workflows with Apps Script, AppSheet, and Google Sheets.</div>
                 </div>
             </div>
         </div>
@@ -769,44 +648,29 @@
         <div class="container">
             <div class="section-label">Tech Stack</div>
             <h2 class="section-title">Platforms & tools I work with</h2>
+            <div class="section-desc">Deep expertise across the Google ecosystem, major cloud providers, and enterprise platforms.</div>
             <div class="platform-logos">
-                <div class="platform-item fade-in">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-                    Google Workspace
-                </div>
-                <div class="platform-item fade-in">
-                    <svg viewBox="0 0 24 24" fill="#FF9900"><path d="M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576a.363.363 0 01.064.2c0 .084-.048.168-.152.252l-.504.336a.367.367 0 01-.2.072c-.08 0-.16-.04-.24-.112a2.507 2.507 0 01-.272-.352 6.041 6.041 0 01-.232-.44c-.584.688-1.32 1.032-2.208 1.032-.632 0-1.136-.18-1.504-.54-.368-.36-.556-.84-.556-1.44 0-.636.224-1.152.68-1.544.456-.392 1.064-.588 1.832-.588.256 0 .52.02.8.056.28.036.568.096.872.168V8.72c0-.572-.12-.972-.36-1.2-.244-.228-.66-.34-1.252-.34-.268 0-.544.032-.828.1a6.065 6.065 0 00-.828.26.2.2 0 01-.128.048c-.12 0-.18-.084-.18-.256v-.392c0-.132.016-.232.056-.292a.58.58 0 01.22-.148c.268-.136.592-.252.972-.344a4.476 4.476 0 011.196-.14c.912 0 1.58.208 2.008.62.424.412.64 1.04.64 1.88v2.476h.004zM3.564 11.3c.248 0 .504-.044.776-.136.272-.092.512-.26.712-.492a1.24 1.24 0 00.296-.572c.048-.2.08-.44.08-.72v-.348a6.317 6.317 0 00-.696-.128 5.68 5.68 0 00-.712-.048c-.5 0-.868.096-1.112.292-.244.196-.364.472-.364.832 0 .336.088.588.268.76.176.176.432.26.752.26zm6.132.92c-.152 0-.256-.024-.32-.076a.604.604 0 01-.144-.268L7.3 5.292c-.048-.148-.072-.244-.072-.292 0-.12.06-.184.18-.184h.788c.16 0 .268.024.328.076.064.048.112.148.152.268l1.376 5.424 1.276-5.424c.032-.124.08-.22.148-.268a.548.548 0 01.336-.076h.644c.16 0 .268.024.336.076.064.048.12.148.148.268l1.292 5.488 1.416-5.488c.04-.124.092-.22.152-.268.064-.048.172-.076.328-.076h.748c.12 0 .184.06.184.184 0 .036-.008.076-.016.12a1.062 1.062 0 01-.056.176L14.66 11.88c-.04.148-.088.244-.144.268-.06.048-.168.076-.32.076h-.692c-.16 0-.268-.024-.332-.076-.064-.052-.12-.148-.148-.272l-1.268-5.28-1.26 5.276c-.032.128-.084.224-.148.276-.064.048-.176.076-.332.076h-.692l.004-.004zm10.088.224a4.3 4.3 0 01-.992-.12 3.094 3.094 0 01-.748-.268c-.12-.068-.2-.14-.236-.208a.494.494 0 01-.048-.2v-.408c0-.172.064-.256.184-.256a.44.44 0 01.14.024c.048.016.12.052.2.092.272.12.568.216.884.288.32.072.632.108.948.108.5 0 .892-.088 1.168-.264a.856.856 0 00.42-.748.78.78 0 00-.212-.564c-.14-.148-.408-.28-.796-.392l-1.144-.356c-.576-.18-.1-.42-1.264-.716-.268-.3-.4-.648-.4-1.04 0-.3.064-.564.196-.792.132-.228.308-.428.528-.588.22-.164.472-.284.764-.368.292-.084.6-.124.924-.124.16 0 .328.008.492.028.168.02.324.048.476.08.148.036.288.076.42.12.132.044.236.088.312.132a.65.65 0 01.22.18.358.358 0 01.06.216v.38c0 .172-.064.26-.184.26a.82.82 0 01-.3-.1 3.593 3.593 0 00-1.512-.304c-.456 0-.816.072-1.072.22a.726.726 0 00-.38.648c0 .208.076.388.232.536.156.148.444.296.86.42l1.12.352c.572.18.988.432 1.24.752.252.32.376.688.376 1.096 0 .308-.064.588-.188.836a1.936 1.936 0 01-.528.624 2.327 2.327 0 01-.808.396c-.312.092-.648.14-1.012.14z"/><path d="M21.384 18.44c-2.652 1.956-6.496 3-9.804 3-4.632 0-8.808-1.712-11.964-4.56-.248-.224-.024-.532.272-.356 3.408 1.98 7.62 3.176 11.972 3.176 2.936 0 6.164-.608 9.132-1.868.448-.192.824.296.392.608z" fill="#FF9900"/></svg>
-                    AWS
-                </div>
-                <div class="platform-item fade-in">
-                    <svg viewBox="0 0 24 24" fill="#4285F4"><path d="M12.19 2.38a9.344 9.344 0 00-9.234 6.893c.053-.02-.055.013 0 0-3.875 2.551-3.922 8.11-.247 10.941l.006-.007-.007.003a6.542 6.542 0 005.252 2.544h8.061a6.498 6.498 0 005.258-2.544 6.534 6.534 0 00-.258-10.93A9.343 9.343 0 0012.19 2.38zm0 1.867c4.143 0 7.5 3.357 7.5 7.5s-3.357 7.5-7.5 7.5-7.5-3.357-7.5-7.5 3.357-7.5 7.5-7.5z"/></svg>
-                    Google Cloud
-                </div>
-                <div class="platform-item fade-in">
-                    <svg viewBox="0 0 24 24" fill="#0078D4"><rect width="10.931" height="10.931" x="1.008" y="1.008" rx="1"/><rect width="10.931" height="10.931" x="12.069" y="1.008" rx="1"/><rect width="10.931" height="10.931" x="1.008" y="12.069" rx="1"/><rect width="10.931" height="10.931" x="12.069" y="12.069" rx="1"/></svg>
-                    Azure / O365
-                </div>
-                <div class="platform-item fade-in">
-                    <svg viewBox="0 0 24 24" fill="#0080FF"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 5.46 4.45 9.91 9.91 9.91 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 1.67c4.55 0 8.24 3.69 8.24 8.24s-3.69 8.24-8.24 8.24S3.8 16.46 3.8 11.91 7.49 3.67 12.04 3.67z"/></svg>
-                    DigitalOcean
-                </div>
-                <div class="platform-item fade-in">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                    Apps Script
-                </div>
-                <div class="platform-item fade-in">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
-                    DevOps / CI-CD
-                </div>
-                <div class="platform-item fade-in">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg>
-                    Looker Studio
-                </div>
+                <div class="platform-item fade-in"><span class="p-icon">🟡</span> Google Workspace</div>
+                <div class="platform-item fade-in"><span class="p-icon">📱</span> AppSheet</div>
+                <div class="platform-item fade-in"><span class="p-icon">📝</span> Apps Script</div>
+                <div class="platform-item fade-in"><span class="p-icon">📊</span> Google Sheets</div>
+                <div class="platform-item fade-in"><span class="p-icon">📈</span> Looker Studio</div>
+                <div class="platform-item fade-in"><span class="p-icon">☁️</span> Google Cloud</div>
+                <div class="platform-item fade-in"><span class="p-icon">🟠</span> AWS</div>
+                <div class="platform-item fade-in"><span class="p-icon">🔵</span> Microsoft Azure</div>
+                <div class="platform-item fade-in"><span class="p-icon">💧</span> DigitalOcean</div>
+                <div class="platform-item fade-in"><span class="p-icon">🔷</span> Office 365</div>
+                <div class="platform-item fade-in"><span class="p-icon">⚙️</span> cPanel / WHM</div>
+                <div class="platform-item fade-in"><span class="p-icon">🔄</span> CI/CD Pipelines</div>
+                <div class="platform-item fade-in"><span class="p-icon">🐳</span> Docker</div>
+                <div class="platform-item fade-in"><span class="p-icon">🔗</span> Zapier / Make</div>
+                <div class="platform-item fade-in"><span class="p-icon">📧</span> Exchange Server</div>
+                <div class="platform-item fade-in"><span class="p-icon">🐧</span> Linux</div>
             </div>
         </div>
     </section>
 
-    <!-- TRUST SIGNALS -->
+    <!-- TRUST -->
     <section class="trust">
         <div class="container">
             <div class="trust-grid">
@@ -823,7 +687,12 @@
                 <div class="trust-item fade-in">
                     <div class="trust-icon">⏱️</div>
                     <div class="trust-title">Fast Response</div>
-                    <div class="trust-desc">Average response time under 4 hours. Available across US timezones.</div>
+                    <div class="trust-desc">Average response time under 4 hours. Available across all US timezones.</div>
+                </div>
+                <div class="trust-item fade-in">
+                    <div class="trust-icon">🔒</div>
+                    <div class="trust-title">Security First</div>
+                    <div class="trust-desc">Every migration and setup follows enterprise-grade security standards and compliance</div>
                 </div>
             </div>
         </div>
@@ -835,8 +704,8 @@
             <div class="section-label">Let's Work Together</div>
             <h2>Got a migration, automation,<br>or cloud project?</h2>
             <p>I respond within 4 hours. Let's talk about how I can save your team time and headaches.</p>
-            <a href="mailto:raj@rajshakya.dev" class="btn-primary" style="font-size: 17px; padding: 16px 36px;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:raj@rajshakya.dev" class="btn-primary" style="font-size: 18px; padding: 18px 40px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 raj@rajshakya.dev
             </a>
             <div class="cta-email">or connect on <a href="https://www.linkedin.com/in/rajshakya/" target="_blank">LinkedIn</a></div>
@@ -855,16 +724,12 @@
         </div>
     </footer>
 
-    <!-- SCROLL ANIMATIONS -->
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+                if (entry.isIntersecting) { entry.target.classList.add('visible'); }
             });
         }, { threshold: 0.1 });
-
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     </script>
 

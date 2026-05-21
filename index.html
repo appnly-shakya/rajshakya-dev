@@ -925,30 +925,43 @@
     </footer>
 
     <script>
-        // Scroll animations with stagger
-        const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('vis')})},{threshold:0.08});
-        document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
+    // Scroll animations with stagger
+    const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('vis')})},{threshold:0.08});
+    document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
 
-        // Floating particles
-        const pc=document.getElementById('particles');
-        for(let i=0;i<25;i++){
-            const p=document.createElement('div');
-            p.className='particle';
-            p.style.left=Math.random()*100+'%';
-            p.style.animationDuration=(12+Math.random()*20)+'s';
-            p.style.animationDelay=Math.random()*15+'s';
-            p.style.width=p.style.height=(1.5+Math.random()*2.5)+'px';
-            if(Math.random()>0.6)p.style.background='var(--blue)';
-            if(Math.random()>0.85)p.style.background='var(--purple)';
-            pc.appendChild(p);
+    // Floating particles
+    const pc=document.getElementById('particles');
+    for(let i=0;i<25;i++){
+        const p=document.createElement('div');
+        p.className='particle';
+        p.style.left=Math.random()*100+'%';
+        p.style.animationDuration=(12+Math.random()*20)+'s';
+        p.style.animationDelay=Math.random()*15+'s';
+        p.style.width=p.style.height=(1.5+Math.random()*2.5)+'px';
+        if(Math.random()>0.6)p.style.background='var(--blue)';
+        if(Math.random()>0.85)p.style.background='var(--purple)';
+        pc.appendChild(p);
+    }
+
+    // Smooth nav background on scroll
+    const nav=document.querySelector('nav');
+    window.addEventListener('scroll',()=>{
+        nav.style.borderBottomColor=window.scrollY>50?'var(--border)':'var(--border-s)';
+    });
+
+    // Fix mobile padding - remove glow overflow
+    function fixMobile(){
+        if(window.innerWidth<=768){
+            document.body.style.overflowX='hidden';
+            document.querySelector('.hero').style.overflow='hidden';
+        } else {
+            document.body.style.overflowX='';
+            document.querySelector('.hero').style.overflow='visible';
         }
-
-        // Smooth nav background on scroll
-        const nav=document.querySelector('nav');
-        window.addEventListener('scroll',()=>{
-            nav.style.borderBottomColor=window.scrollY>50?'var(--border)':'var(--border-s)';
-        });
-    </script>
+    }
+    fixMobile();
+    window.addEventListener('resize',fixMobile);
+</script>
 
 </body>
 </html>

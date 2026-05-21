@@ -1,23 +1,30 @@
 # rajshakya.dev
 
-Personal portfolio site for Raj Shakya — Google Workspace & Cloud Infrastructure Expert.
+Personal portfolio site for Raj Shakya — Google Workspace, Cloud & Automation Expert.
+
+## Files
+
+- `index.html` — Main website (single page, fully responsive)
+- `sitemap.xml` — For Google Search Console indexing
+- `robots.txt` — Tells search engines to index everything
+- `vercel.json` — Vercel deployment config
 
 ## Deploy to Vercel
 
-1. Push this folder to a GitHub repo
-2. Go to [vercel.com](https://vercel.com) and sign in with GitHub
-3. Click "New Project" → Import the repo
-4. Deploy (no build settings needed — it's a static HTML site)
-5. Go to Vercel project → Settings → Domains → Add `rajshakya.dev`
-6. In GoDaddy DNS, add:
-   - **A Record**: `@` → `76.76.21.21`
-   - **CNAME**: `www` → `cname.vercel-dns.com`
+1. Push all files to your GitHub repo `rajshakya-dev`
+2. Vercel auto-deploys on push
+3. Domain `rajshakya.dev` already connected via Hostinger nameservers
 
-Site will be live in ~5 minutes after DNS propagation.
+## SEO Setup (do after deploying)
 
-## Customize
+1. Go to [Google Search Console](https://search.google.com/search-console)
+2. Add property → `rajshakya.dev`
+3. Verify via DNS TXT record in Vercel DNS
+4. Submit sitemap: `https://rajshakya.dev/sitemap.xml`
 
-- Update LinkedIn URL in footer and CTA section
-- Update Upwork profile URL in footer  
-- Replace `raj@rajshakya.dev` with your actual email
-- Add Calendly link when ready
+## Contact
+
+- Email: raj@rajshakya.dev
+- LinkedIn: https://www.linkedin.com/in/rajshakya/
+- Upwork: https://www.upwork.com/freelancers/~0192fe4974ea3b56bb
+- Book a call: https://calendar.app.google/aLUtFA8hQrv76qLm7

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 60" width="480" height="60">
+  <defs>
+    <linearGradient id="dot-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4ade80"/>
+      <stop offset="100%" style="stop-color:#38bdf8"/>
+    </linearGradient>
+  </defs>
+  <text x="0" y="42" font-family="'JetBrains Mono', 'SF Mono', 'Fira Code', monospace" font-weight="600" font-size="32" fill="#f2f1ec" letter-spacing="-0.5">
+    <tspan>raj</tspan><tspan fill="url(#dot-grad)">.</tspan><tspan>shakya</tspan><tspan fill="url(#dot-grad)">.dev</tspan>
+  </text>
+</svg>

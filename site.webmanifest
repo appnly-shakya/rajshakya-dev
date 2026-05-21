@@ -1,0 +1,21 @@
+{
+    "name": "Raj Shakya — Google Workspace & Cloud Expert",
+    "short_name": "Raj Shakya",
+    "description": "Google Workspace migration, automation & cloud infrastructure expert",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#060608",
+    "theme_color": "#4ade80",
+    "icons": [
+        {
+            "src": "/android-chrome-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/logo-256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        }
+    ]
+}

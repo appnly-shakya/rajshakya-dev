@@ -117,12 +117,21 @@
             }
         ]
     }
+   
+    
+    
+    
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,600&display=swap" rel="stylesheet">
-   <style>
+   
+    
+    
+    
+    
+    <style>
     :root {
         --bg: #060608;
         --bg2: #0c0c10;
@@ -151,7 +160,7 @@
 
     *{margin:0;padding:0;box-sizing:border-box}
     html{scroll-behavior:smooth}
-    html, body { overflow-x: hidden; }   /* ← Yeh right side space fix karta hai */
+    html, body { overflow-x: hidden; }   /* ← Right side space fix */
 
     body{
         font-family:'Outfit',sans-serif;
@@ -172,8 +181,8 @@
         max-width:1220px;
         margin:0 auto;
         padding:0 28px;
-        width: 100%;                    /* ← Yeh important fix hai */
-        box-sizing: border-box;
+        width:100%;
+        box-sizing:border-box;
     }
 
     /* FLOATING PARTICLES */
@@ -190,7 +199,7 @@
         100%{opacity:0;transform:translateY(-10vh) scale(1)}
     }
 
-    /* === SAB ORIGINAL STYLES (kuch bhi nahi hataya) === */
+    /* NAV */
     nav{
         position:fixed;top:0;left:0;right:0;z-index:100;
         padding:16px 0;
@@ -215,10 +224,10 @@
     .nav-cta:hover{transform:translateY(-1px);box-shadow:0 6px 24px var(--acc-g)}
     .mob-btn{display:none;background:none;border:none;color:var(--t1);font-size:24px;cursor:pointer}
 
+    /* HERO + ALL OTHER ORIGINAL STYLES (kuch bhi nahi hataya) */
     .hero{padding:180px 0 120px;position:relative;z-index:1;overflow:visible}
-    .hero::before,.hero::after{content:'';position:absolute;pointer-events:none}
-    .hero::before{top:-400px;right:-300px;width:900px;height:900px;background:radial-gradient(circle,var(--acc-g) 0%,transparent 60%)}
-    .hero::after{bottom:-300px;left:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(56,189,248,0.06) 0%,transparent 60%)}
+    .hero::before{content:'';position:absolute;top:-400px;right:-300px;width:900px;height:900px;background:radial-gradient(circle,var(--acc-g) 0%,transparent 60%);pointer-events:none}
+    .hero::after{content:'';position:absolute;bottom:-300px;left:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(56,189,248,0.06) 0%,transparent 60%);pointer-events:none}
 
     .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:var(--card);border:1px solid var(--border);border-radius:100px;font-size:13px;color:var(--acc);font-weight:600;margin-bottom:36px;animation:fadeUp .6s ease;letter-spacing:0.5px}
     .badge::before{content:'';width:8px;height:8px;background:var(--acc);border-radius:50%;animation:pulse 2s infinite}
@@ -236,31 +245,40 @@
 
     .btn1{display:inline-flex;align-items:center;gap:10px;padding:17px 34px;background:var(--acc);color:var(--bg);border:none;border-radius:10px;font-size:16px;font-weight:700;text-decoration:none;transition:all .2s}
     .btn1:hover{transform:translateY(-2px);box-shadow:0 10px 40px var(--acc-g)}
-    .btn2,.btn-cal{display:inline-flex;align-items:center;gap:10px;padding:17px 34px;border-radius:10px;font-size:16px;font-weight:600;text-decoration:none;transition:all .2s}
-    .btn2{border:1px solid var(--border);color:var(--t1)}
+    .btn2{display:inline-flex;align-items:center;gap:10px;padding:17px 34px;background:transparent;color:var(--t1);border:1px solid var(--border);border-radius:10px;font-size:16px;font-weight:600;text-decoration:none;transition:all .2s}
     .btn2:hover{border-color:var(--t3);background:var(--card)}
-    .btn-cal{border:2px solid var(--blue);color:var(--blue)}
+    .btn-cal{display:inline-flex;align-items:center;gap:10px;padding:17px 34px;background:transparent;color:var(--blue);border:2px solid var(--blue);border-radius:10px;font-size:16px;font-weight:700;text-decoration:none;transition:all .25s}
     .btn-cal:hover{background:var(--blue);color:var(--bg);transform:translateY(-2px);box-shadow:0 10px 40px var(--blue-g)}
+    .btn-cal svg{stroke:currentColor}
 
     @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
 
-    /* STATS, SERVICES, INDUSTRIES etc. — sab original */
+    /* STATS */
+    .stats{padding:70px 0;border-top:1px solid var(--border-s);border-bottom:1px solid var(--border-s);position:relative;z-index:1}
     .stats-g{display:grid;grid-template-columns:repeat(5,1fr)}
     .st{text-align:center;padding:26px 16px;position:relative}
     .st:not(:last-child)::after{content:'';position:absolute;right:0;top:18%;height:64%;width:1px;background:var(--border)}
+    .st-n{font-family:'JetBrains Mono',monospace;font-size:clamp(36px,5vw,54px);font-weight:600;color:var(--t1);letter-spacing:-2px}
+    .st-n span{color:var(--acc)}
+    .st-l{font-size:12px;color:var(--t3);margin-top:8px;text-transform:uppercase;letter-spacing:2.5px;font-weight:500}
+
+    /* SECTION LABELS */
     .s-lab{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--acc);text-transform:uppercase;letter-spacing:4px;margin-bottom:16px;font-weight:600}
     .s-title{font-family:'Fraunces',serif;font-size:clamp(36px,5vw,56px);font-weight:700;letter-spacing:-2px;margin-bottom:20px;line-height:1.1}
     .s-desc{font-size:20px;color:var(--t2);max-width:660px;margin-bottom:64px;line-height:1.7;font-weight:300}
 
+    /* SERVICES - FIXED GRID */
     .services{padding:130px 0;position:relative;z-index:1}
     .srv-g{
         display:grid;
-        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));   /* ← Yeh best responsive fix hai */
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));   /* ← Yeh right space fix karta hai */
         gap:20px;
     }
 
     .srv{background:var(--card);border:1px solid var(--border-s);border-radius:16px;padding:40px;transition:all .35s;position:relative;overflow:hidden}
+    .srv::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--acc),transparent);opacity:0;transition:opacity .3s}
     .srv:hover{border-color:var(--border);background:var(--card-hover);transform:translateY(-4px)}
+    .srv:hover::before{opacity:1}
 
     .srv-ico{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:24px;font-size:26px}
     .srv-ico.green{background:var(--acc-g)}
@@ -280,12 +298,53 @@
     .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:20px}
     .tag{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;padding:5px 12px;border-radius:6px;letter-spacing:0.5px}
 
+    /* INDUSTRIES, RESULTS, PLATFORMS, TRUST, CTA, FOOTER - sab original */
+    .industries{padding:130px 0;background:var(--bg2);border-top:1px solid var(--border-s);border-bottom:1px solid var(--border-s);position:relative;z-index:1}
     .ind-g{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-    .res-g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .plat-g{display:flex;flex-wrap:wrap;gap:12px}
-    .trust-g{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+    .ind{background:var(--card);border:1px solid var(--border-s);border-radius:14px;padding:30px;text-align:center;transition:all .3s}
+    .ind:hover{border-color:var(--border);transform:translateY(-3px)}
+    .ind-i{font-size:40px;margin-bottom:14px}
+    .ind-n{font-size:18px;font-weight:700;margin-bottom:6px;letter-spacing:-0.2px}
+    .ind-d{font-size:14px;color:var(--t3);line-height:1.6;font-weight:400}
 
-    /* RESPONSIVE (tumhara original + extra safety) */
+    .results{padding:130px 0;position:relative;z-index:1}
+    .res-g{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .res{background:var(--card);border:1px solid var(--border-s);border-radius:16px;padding:40px}
+    .res-m{font-family:'JetBrains Mono',monospace;font-size:48px;font-weight:600;color:var(--acc);margin-bottom:10px;letter-spacing:-2px}
+    .res-t{font-size:22px;font-weight:700;margin-bottom:12px}
+    .res-d{font-size:16px;color:var(--t2);line-height:1.75;font-weight:300}
+
+    .platforms{padding:130px 0;background:var(--bg2);border-top:1px solid var(--border-s);border-bottom:1px solid var(--border-s);position:relative;z-index:1}
+    .plat-g{display:flex;flex-wrap:wrap;gap:12px}
+    .plat{display:flex;align-items:center;gap:10px;padding:14px 24px;background:var(--card);border:1px solid var(--border-s);border-radius:10px;font-size:14px;font-weight:600;color:var(--t2);transition:all .2s}
+    .plat:hover{border-color:var(--border);color:var(--t1);transform:translateY(-1px)}
+    .plat .pi{font-size:20px}
+
+    .trust{padding:110px 0;position:relative;z-index:1}
+    .trust-g{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;text-align:center}
+    .tr{padding:28px}
+    .tr-i{font-size:38px;margin-bottom:18px}
+    .tr-t{font-size:18px;font-weight:700;margin-bottom:10px}
+    .tr-d{font-size:14px;color:var(--t3);line-height:1.7;font-weight:400}
+
+    .cta{padding:130px 0;text-align:center;position:relative;z-index:1}
+    .cta::before{content:'';position:absolute;bottom:-100px;left:50%;transform:translateX(-50%);width:1000px;height:500px;background:radial-gradient(ellipse,var(--acc-g) 0%,transparent 65%);pointer-events:none}
+    .cta h2{font-family:'Fraunces',serif;font-size:clamp(36px,5vw,60px);font-weight:700;letter-spacing:-2px;margin-bottom:20px;line-height:1.1}
+    .cta p{color:var(--t2);font-size:20px;margin-bottom:48px;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.7;font-weight:300}
+    .cta-sub{font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--t3);margin-top:26px}
+    .cta-sub a{color:var(--acc);text-decoration:none;font-weight:500}
+
+    footer{padding:48px 0;border-top:1px solid var(--border-s);position:relative;z-index:1}
+    footer .c{display:flex;justify-content:space-between;align-items:center}
+    .f-t{font-size:14px;color:var(--t3);font-weight:400}
+    .f-l{display:flex;gap:28px}
+    .f-l a{color:var(--t3);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
+    .f-l a:hover{color:var(--t1)}
+
+    .fi{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+    .fi.vis{opacity:1;transform:translateY(0)}
+
+    /* RESPONSIVE (improved) */
     @media(max-width:1024px){
         .c{padding:0 20px}
         .srv-g{grid-template-columns:repeat(2,1fr)}
@@ -307,7 +366,7 @@
         .stats-g{grid-template-columns:repeat(2,1fr)}
     }
 
-    /* Extra safety — right side space kabhi nahi aayega */
+    /* Extra safety */
     .srv, .res, .ind, .plat, .tags {
         max-width: 100%;
         word-break: break-word;

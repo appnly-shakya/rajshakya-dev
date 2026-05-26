@@ -1438,81 +1438,80 @@ body:not(.light) .sun{display:none}
 }
 
 
-        /* TESTIMONIALS */
+/* TESTIMONIALS */
 .testimonials{
     padding:120px 0;
     overflow:hidden;
     position:relative;
 }
 
-.testimonial-wrap{
-    margin-top:60px;
+.t-marquee{
     overflow:hidden;
     position:relative;
+    margin-top:60px;
 }
 
-.testimonial-track{
+.t-track{
     display:flex;
-    gap:24px;
+    gap:22px;
     width:max-content;
-    animation:testimonialsMove 45s linear infinite;
+    animation:scrollTestimonial 38s linear infinite;
 }
 
-.testimonial-track:hover{
+.t-track:hover{
     animation-play-state:paused;
 }
 
 .t-card{
-    width:420px;
-    min-height:260px;
+    width:340px;
+    min-height:220px;
+    padding:28px;
+    border-radius:26px;
     background:rgba(255,255,255,0.04);
     border:1px solid rgba(255,255,255,0.08);
-    border-radius:24px;
-    padding:34px;
     backdrop-filter:blur(20px);
-    transition:all .3s ease;
     flex-shrink:0;
+    transition:.35s ease;
+    position:relative;
+    overflow:hidden;
 }
 
 .t-card:hover{
-    transform:translateY(-6px);
-    border-color:rgba(74,222,128,0.25);
+    transform:translateY(-8px);
+    border-color:rgba(74,222,128,.28);
+    box-shadow:0 20px 60px rgba(74,222,128,.08);
 }
 
 .t-stars{
     color:#ffd43b;
-    font-size:28px;
-    margin-bottom:24px;
+    font-size:24px;
+    margin-bottom:18px;
+    letter-spacing:2px;
 }
 
 .t-card p{
-    font-size:20px;
-    line-height:1.9;
     color:var(--t1);
-    margin-bottom:28px;
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:24px;
     font-weight:300;
 }
 
-.t-user{
+.t-card span{
     color:var(--t3);
-    font-size:16px;
-    line-height:1.7;
+    font-size:14px;
 }
 
-.t-user strong{
-    color:var(--t1);
-    display:block;
-    margin-bottom:4px;
-}
+@keyframes scrollTestimonial{
 
-/* AUTO SLIDE */
-@keyframes testimonialsMove{
     from{
         transform:translateX(0);
     }
+
     to{
         transform:translateX(-50%);
     }
+
 }
 
 /* MOBILE */
@@ -1523,18 +1522,14 @@ body:not(.light) .sun{display:none}
     }
 
     .t-card{
-        width:300px;
-        min-height:auto;
-        padding:24px;
+        width:280px;
+        min-height:200px;
+        padding:22px;
     }
 
     .t-card p{
-        font-size:16px;
+        font-size:15px;
         line-height:1.8;
-    }
-
-    .t-stars{
-        font-size:22px;
     }
 
 }
@@ -1817,8 +1812,7 @@ body:not(.light) .sun{display:none}
 
 
 
-            <!-- TESTIMONIAL SLIDER -->
-<section class="testimonials">
+            <section class="testimonials">
 
     <div class="c">
 
@@ -1829,21 +1823,19 @@ body:not(.light) .sun{display:none}
             around the world
         </h2>
 
-        <div class="testimonial-wrap">
+        <div class="t-marquee">
 
-            <div class="testimonial-track">
+            <div class="t-track">
 
                 <!-- CARD -->
                 <div class="t-card">
                     <div class="t-stars">★★★★★</div>
 
                     <p>
-                        “Rajveer was great to work with! He was professional, kind and very responsive throughout the process. He quickly understood the issue, resolved my problem efficiently and made the whole experience smooth and stress free.”
+                        “Rajveer was great to work with! Professional, responsive and solved everything smoothly.”
                     </p>
 
-                    <div class="t-user">
-                        <strong>Rodan</strong>
-                    </div>
+                    <span>— Rodan</span>
                 </div>
 
                 <!-- CARD -->
@@ -1851,25 +1843,21 @@ body:not(.light) .sun{display:none}
                     <div class="t-stars">★★★★★</div>
 
                     <p>
-                        “Raj has been very helpful over the years in helping me solve tech issues with my PC.”
+                        “Raj has been very helpful over the years in solving tech issues with my PC.”
                     </p>
 
-                    <div class="t-user">
-                        <strong>Joe</strong>
-                    </div>
+                    <span>— Joe</span>
                 </div>
 
                 <!-- CARD -->
                 <div class="t-card">
-                    <div class="t-stars">★★★★☆</div>
+                    <div class="t-stars">★★★★★</div>
 
                     <p>
-                        “Raj was professional and helpful at every turn. He was easy to collaborate with and worked diligently to ensure the end result was exactly what we wanted.”
+                        “Professional and helpful at every turn. Great collaboration and excellent delivery.”
                     </p>
 
-                    <div class="t-user">
-                        <strong>Warehouse Inventory Client</strong>
-                    </div>
+                    <span>— Inventory System Client</span>
                 </div>
 
                 <!-- CARD -->
@@ -1880,9 +1868,7 @@ body:not(.light) .sun{display:none}
                         “I would work with Rajveer again.”
                     </p>
 
-                    <div class="t-user">
-                        <strong>Google Workspace Migration Client</strong>
-                    </div>
+                    <span>— Google Workspace Migration</span>
                 </div>
 
                 <!-- CARD -->
@@ -1890,38 +1876,42 @@ body:not(.light) .sun{display:none}
                     <div class="t-stars">★★★★★</div>
 
                     <p>
-                        “Rajveer is highly competent, effective and great to work with!”
+                        “Highly competent, effective and great to work with!”
                     </p>
 
-                    <div class="t-user">
-                        <strong>Google Accounts Cleanup Client</strong>
-                    </div>
+                    <span>— Google Accounts Cleanup</span>
                 </div>
 
-                <!-- CARD -->
+                <!-- DUPLICATE FOR INFINITE LOOP -->
+
                 <div class="t-card">
                     <div class="t-stars">★★★★★</div>
 
                     <p>
-                        “Fantastic to work with! Would hire again.”
+                        “Rajveer was great to work with! Professional, responsive and solved everything smoothly.”
                     </p>
 
-                    <div class="t-user">
-                        <strong>Looker Studio Automation Client</strong>
-                    </div>
+                    <span>— Rodan</span>
                 </div>
 
-                <!-- CARD -->
                 <div class="t-card">
                     <div class="t-stars">★★★★★</div>
 
                     <p>
-                        “Raj was totally understanding and attentive to our needs and the execution was brilliant.”
+                        “Raj has been very helpful over the years in solving tech issues with my PC.”
                     </p>
 
-                    <div class="t-user">
-                        <strong>Automation Client</strong>
-                    </div>
+                    <span>— Joe</span>
+                </div>
+
+                <div class="t-card">
+                    <div class="t-stars">★★★★★</div>
+
+                    <p>
+                        “Professional and helpful at every turn. Great collaboration and excellent delivery.”
+                    </p>
+
+                    <span>— Inventory System Client</span>
                 </div>
 
             </div>
@@ -1966,22 +1956,6 @@ body:not(.light) .sun{display:none}
                         </div>
                     </div>
 
-                </div>
-
-            </div>
-
-            <!-- TESTIMONIAL -->
-            <div class="impact-card">
-
-                <div class="stars">★★★★★</div>
-
-                <p class="impact-quote">
-                    Raj automated our entire client onboarding process. We save 20+ hours every week and never miss a follow-up now.
-                </p>
-
-                <div class="impact-user">
-                    — Michael T.<br>
-                    CEO, Real Estate Company (USA)
                 </div>
 
             </div>
@@ -2555,22 +2529,7 @@ themeToggle.addEventListener('click',()=>{
 });
 </script>
 
-    <script>
 
-const mobBtn = document.querySelector('.mob-btn');
-const navMenu = document.querySelector('.nav-l');
-
-mobBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
-
-    if(navMenu.classList.contains('open')){
-        mobBtn.innerHTML = '✕';
-    } else {
-        mobBtn.innerHTML = '☰';
-    }
-});
-
-</script>
     <script>
 
 const mobBtn = document.getElementById('mobBtn');

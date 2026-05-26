@@ -281,6 +281,55 @@ body:not(.light) .sun{display:none}
         .mob-btn{display:none;background:none;border:none;color:var(--t1);font-size:24px;cursor:pointer}
 
 
+        /* MOBILE NAV */
+.mob-btn{
+    display:none;
+    background:none;
+    border:none;
+    color:var(--t1);
+    font-size:26px;
+    cursor:pointer;
+    z-index:120;
+}
+
+@media(max-width:768px){
+
+    .mob-btn{
+        display:block;
+    }
+
+    .nav-l{
+        position:absolute;
+        top:72px;
+        left:20px;
+        right:20px;
+        background:rgba(12,12,16,0.96);
+        backdrop-filter:blur(24px);
+        border:1px solid var(--border);
+        border-radius:20px;
+        padding:22px;
+        display:none;
+        flex-direction:column;
+        gap:18px;
+        z-index:110;
+        box-shadow:0 20px 60px rgba(0,0,0,0.35);
+    }
+
+    .nav-l.open{
+        display:flex;
+    }
+
+    .nav-l a{
+        font-size:16px;
+    }
+
+    .nav-cta{
+        text-align:center;
+        justify-content:center;
+    }
+
+}
+
 
         
         /* HERO */
@@ -2242,6 +2291,23 @@ themeToggle.addEventListener('click',()=>{
         localStorage.setItem('theme','dark');
     }
 });
+</script>
+
+    <script>
+
+const mobBtn = document.querySelector('.mob-btn');
+const navMenu = document.querySelector('.nav-l');
+
+mobBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
+
+    if(navMenu.classList.contains('open')){
+        mobBtn.innerHTML = '✕';
+    } else {
+        mobBtn.innerHTML = '☰';
+    }
+});
+
 </script>
     
 </body>

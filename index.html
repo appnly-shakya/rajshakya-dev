@@ -1437,79 +1437,107 @@ body:not(.light) .sun{display:none}
 
 }
 
-
 /* TESTIMONIALS */
 .testimonials{
     padding:120px 0;
-    overflow:hidden;
     position:relative;
 }
 
-.t-marquee{
-    overflow:hidden;
+.testimonial-slider{
     position:relative;
     margin-top:60px;
+    max-width:900px;
 }
 
-.t-track{
-    display:flex;
-    gap:22px;
-    width:max-content;
-    animation:scrollTestimonial 38s linear infinite;
-}
-
-.t-track:hover{
-    animation-play-state:paused;
-}
-
-.t-card{
-    width:340px;
-    min-height:220px;
-    padding:28px;
-    border-radius:26px;
+.testimonial-card{
+    display:none;
+    position:relative;
+    padding:60px;
+    border-radius:32px;
     background:rgba(255,255,255,0.04);
     border:1px solid rgba(255,255,255,0.08);
-    backdrop-filter:blur(20px);
-    flex-shrink:0;
-    transition:.35s ease;
-    position:relative;
+    backdrop-filter:blur(24px);
     overflow:hidden;
+    animation:fadeSlide .6s ease;
 }
 
-.t-card:hover{
-    transform:translateY(-8px);
-    border-color:rgba(74,222,128,.28);
-    box-shadow:0 20px 60px rgba(74,222,128,.08);
+.testimonial-card.active{
+    display:block;
 }
 
-.t-stars{
+.quote-icon{
+    position:absolute;
+    top:20px;
+    right:30px;
+    font-size:120px;
+    color:rgba(74,222,128,0.08);
+    font-family:serif;
+    line-height:1;
+}
+
+.testimonial-stars{
     color:#ffd43b;
-    font-size:24px;
-    margin-bottom:18px;
-    letter-spacing:2px;
+    font-size:28px;
+    margin-bottom:24px;
+    letter-spacing:3px;
 }
 
-.t-card p{
+.testimonial-text{
+    font-size:28px;
+    line-height:1.8;
+    color:var(--t1);
+    font-weight:300;
+    margin-bottom:40px;
+    max-width:760px;
+}
+
+.testimonial-user strong{
+    display:block;
     color:var(--t1);
     font-size:18px;
-    line-height:1.8;
-    margin-bottom:24px;
-    font-weight:300;
+    margin-bottom:6px;
 }
 
-.t-card span{
+.testimonial-user span{
     color:var(--t3);
-    font-size:14px;
+    font-size:15px;
 }
 
-@keyframes scrollTestimonial{
+.testimonial-controls{
+    display:flex;
+    gap:14px;
+    margin-top:28px;
+}
+
+.t-btn{
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,0.08);
+    background:rgba(255,255,255,0.04);
+    color:var(--t1);
+    font-size:24px;
+    cursor:pointer;
+    transition:.3s ease;
+    backdrop-filter:blur(12px);
+}
+
+.t-btn:hover{
+    transform:translateY(-3px);
+    border-color:rgba(74,222,128,.35);
+    background:rgba(74,222,128,.08);
+}
+
+@keyframes fadeSlide{
 
     from{
-        transform:translateX(0);
+        opacity:0;
+        transform:translateY(20px);
     }
 
     to{
-        transform:translateX(-50%);
+        opacity:1;
+        transform:translateY(0);
     }
 
 }
@@ -1521,15 +1549,30 @@ body:not(.light) .sun{display:none}
         padding:80px 0;
     }
 
-    .t-card{
-        width:280px;
-        min-height:200px;
-        padding:22px;
+    .testimonial-card{
+        padding:32px 24px;
+        border-radius:24px;
     }
 
-    .t-card p{
-        font-size:15px;
-        line-height:1.8;
+    .testimonial-text{
+        font-size:18px;
+        line-height:1.9;
+    }
+
+    .quote-icon{
+        font-size:72px;
+        top:10px;
+        right:16px;
+    }
+
+    .testimonial-stars{
+        font-size:22px;
+    }
+
+    .t-btn{
+        width:50px;
+        height:50px;
+        font-size:20px;
     }
 
 }
@@ -1812,7 +1855,8 @@ body:not(.light) .sun{display:none}
 
 
 
-            <section class="testimonials">
+<!-- TESTIMONIALS -->
+<section class="testimonials">
 
     <div class="c">
 
@@ -1823,96 +1867,72 @@ body:not(.light) .sun{display:none}
             around the world
         </h2>
 
-        <div class="t-marquee">
+        <div class="testimonial-slider">
 
-            <div class="t-track">
+            <!-- CARD -->
+            <div class="testimonial-card active">
 
-                <!-- CARD -->
-                <div class="t-card">
-                    <div class="t-stars">★★★★★</div>
+                <div class="quote-icon">“</div>
 
-                    <p>
-                        “Rajveer was great to work with! Professional, responsive and solved everything smoothly.”
-                    </p>
+                <div class="testimonial-stars">★★★★★</div>
 
-                    <span>— Rodan</span>
+                <p class="testimonial-text">
+                    Rajveer was great to work with! He was professional, kind and very responsive throughout the process. He quickly understood the issue, resolved my problem efficiently and made the whole experience smooth and stress free.
+                </p>
+
+                <div class="testimonial-user">
+                    <strong>Rodan</strong>
+                    <span>Business Owner</span>
                 </div>
 
-                <!-- CARD -->
-                <div class="t-card">
-                    <div class="t-stars">★★★★★</div>
+            </div>
 
-                    <p>
-                        “Raj has been very helpful over the years in solving tech issues with my PC.”
-                    </p>
+            <!-- CARD -->
+            <div class="testimonial-card">
 
-                    <span>— Joe</span>
+                <div class="quote-icon">“</div>
+
+                <div class="testimonial-stars">★★★★★</div>
+
+                <p class="testimonial-text">
+                    Raj has been very helpful over the years in helping me solve tech issues with my PC.
+                </p>
+
+                <div class="testimonial-user">
+                    <strong>Joe</strong>
+                    <span>Long-term Client</span>
                 </div>
 
-                <!-- CARD -->
-                <div class="t-card">
-                    <div class="t-stars">★★★★★</div>
+            </div>
 
-                    <p>
-                        “Professional and helpful at every turn. Great collaboration and excellent delivery.”
-                    </p>
+            <!-- CARD -->
+            <div class="testimonial-card">
 
-                    <span>— Inventory System Client</span>
+                <div class="quote-icon">“</div>
+
+                <div class="testimonial-stars">★★★★★</div>
+
+                <p class="testimonial-text">
+                    Raj was professional and helpful at every turn. He was easy to collaborate with and worked diligently to ensure the end result was exactly what we wanted.
+                </p>
+
+                <div class="testimonial-user">
+                    <strong>Warehouse Inventory Client</strong>
+                    <span>Automation Project</span>
                 </div>
 
-                <!-- CARD -->
-                <div class="t-card">
-                    <div class="t-stars">★★★★★</div>
+            </div>
 
-                    <p>
-                        “I would work with Rajveer again.”
-                    </p>
+            <!-- ARROWS -->
+            <div class="testimonial-controls">
 
-                    <span>— Google Workspace Migration</span>
-                </div>
+                <button class="t-btn" id="prevTestimonial">
+                    ←
+                </button>
 
-                <!-- CARD -->
-                <div class="t-card">
-                    <div class="t-stars">★★★★★</div>
-
-                    <p>
-                        “Highly competent, effective and great to work with!”
-                    </p>
-
-                    <span>— Google Accounts Cleanup</span>
-                </div>
-
-                <!-- DUPLICATE FOR INFINITE LOOP -->
-
-                <div class="t-card">
-                    <div class="t-stars">★★★★★</div>
-
-                    <p>
-                        “Rajveer was great to work with! Professional, responsive and solved everything smoothly.”
-                    </p>
-
-                    <span>— Rodan</span>
-                </div>
-
-                <div class="t-card">
-                    <div class="t-stars">★★★★★</div>
-
-                    <p>
-                        “Raj has been very helpful over the years in solving tech issues with my PC.”
-                    </p>
-
-                    <span>— Joe</span>
-                </div>
-
-                <div class="t-card">
-                    <div class="t-stars">★★★★★</div>
-
-                    <p>
-                        “Professional and helpful at every turn. Great collaboration and excellent delivery.”
-                    </p>
-
-                    <span>— Inventory System Client</span>
-                </div>
+                <button class="t-btn" id="nextTestimonial">
+                    →
+                </button>
 
             </div>
 

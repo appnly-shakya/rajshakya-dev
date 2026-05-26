@@ -2613,21 +2613,7 @@ document.querySelectorAll('#navL a').forEach(link => {
 </script>
     <script>
 
-/* MOBILE MENU */
-const mobBtn = document.getElementById('mobBtn');
-const navL = document.getElementById('navL');
 
-mobBtn.addEventListener('click', () => {
-
-    navL.classList.toggle('open');
-
-    if(navL.classList.contains('open')){
-        mobBtn.innerHTML = '✕';
-    } else {
-        mobBtn.innerHTML = '☰';
-    }
-
-});
 
 /* CLOSE MENU ON LINK CLICK */
 document.querySelectorAll('#navL a').forEach(link => {
@@ -2731,5 +2717,7 @@ setInterval(() => {
 }, 6000);
 
 </script>
+
+    
 </body>
 </html>

@@ -1,8 +1,10 @@
 {
-    "name": "Raj Shakya — Google Workspace & Cloud Expert",
+    "name": "Raj Shakya — AI Automation & Google Workspace Expert",
     "short_name": "Raj Shakya",
-    "description": "Google Workspace migration, automation & cloud infrastructure expert",
+    "description": "AI automation, Google Workspace migration, AppSheet development & cloud infrastructure expert",
     "start_url": "/",
+    "scope": "/",
+    "id": "/",
     "display": "standalone",
     "background_color": "#060608",
     "theme_color": "#4ade80",

@@ -157,6 +157,62 @@
             --cyan-g: rgba(34,211,238,0.12);
         }
 
+        /* LIGHT THEME */
+body.light{
+    --bg:#f6f7fb;
+    --bg2:#ffffff;
+    --bg3:#eef1f7;
+    --card:#ffffff;
+    --card-hover:#f8fafc;
+    --border:#dbe2ea;
+    --border-s:#e7edf3;
+    --t1:#0f172a;
+    --t2:#475569;
+    --t3:#64748b;
+    --acc:#16a34a;
+    --acc2:#15803d;
+    --acc-g:rgba(22,163,74,0.12);
+    background:#f6f7fb;
+}
+
+/* THEME BUTTON */
+.theme-toggle{
+    position:fixed;
+    top:88px;
+    right:24px;
+    z-index:999;
+    width:54px;
+    height:54px;
+    border-radius:50%;
+    border:1px solid var(--border);
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(20px);
+    color:var(--t1);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:all .3s ease;
+    font-size:20px;
+}
+
+.theme-toggle:hover{
+    transform:translateY(-3px) scale(1.05);
+    box-shadow:0 10px 40px rgba(0,0,0,0.15);
+}
+
+body.light .moon{display:none}
+body:not(.light) .sun{display:none}
+
+@media(max-width:768px){
+    .theme-toggle{
+        width:48px;
+        height:48px;
+        right:16px;
+        top:82px;
+    }
+}
+        
         *{margin:0;padding:0;box-sizing:border-box}
         html{scroll-behavior:smooth}
 
@@ -550,6 +606,49 @@
             .trust-g{grid-template-columns:1fr}
             .cta h2{font-size:22px!important}
         }
+
+        @media(max-width:768px){
+
+    .srv{
+        backdrop-filter:blur(12px);
+    }
+
+    .hero-btns{
+        position:relative;
+        z-index:5;
+    }
+
+    .srv-g{
+        gap:18px;
+    }
+
+    .plat{
+        width:100%;
+        justify-content:center;
+    }
+
+    .stats-g{
+        gap:12px;
+    }
+
+    .st{
+        border:1px solid var(--border-s);
+        border-radius:12px;
+    }
+
+    .res{
+        border-radius:14px;
+    }
+
+    .btn1,
+    .btn2,
+    .btn-cal{
+        min-height:54px;
+    }
+}
+
+
+        
     </style>
 </head>
 <body>
@@ -571,12 +670,20 @@
         </div>
     </nav>
 
+    <!-- THEME TOGGLE -->
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <span class="sun">☀️</span>
+    <span class="moon">🌙</span>
+</button>
+
     <!-- HERO -->
     <section class="hero">
         <div class="c">
-            <div class="badge">Available for projects</div>
-            <h1>I migrate, automate<br>& fix <span class="hl">Google<br>Workspace</span></h1>
-            <p class="hero-p">13+ years helping US businesses migrate thousands of users, automate manual work, build custom apps with AI, and run reliable cloud infrastructure — with zero downtime.</p>
+        <div class="badge">
+            Trusted by US businesses for Google Workspace, AI Automation & Cloud Infrastructure
+        </div>
+            <h1>I build AI automation,<br>Google Workspace systems<br>& cloud infrastructure</h1>
+            <p class="hero-p">13+ years helping businesses automate operations using AI, ChatGPT, Claude, Gemini, Google Workspace, AppSheet, cloud infrastructure, and advanced workflow automation — saving teams hundreds of hours every month.</p>
             <div class="hero-btns">
                 <a href="#contact" class="btn1">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -800,6 +907,169 @@
         </div>
     </section>
 
+    <!-- AI AUTOMATION -->
+<section class="services" id="ai-automation">
+    <div class="c">
+        <div class="s-lab">AI Automation</div>
+
+        <h2 class="s-title">
+            AI systems that work<br>
+            while you sleep
+        </h2>
+
+        <div class="s-desc">
+            We build AI-powered workflows using ChatGPT, Claude, Gemini, Grok, Google Sheets, CRMs, APIs, and cloud automation tools to eliminate manual work completely.
+        </div>
+
+        <div class="srv-g">
+
+            <div class="srv fi">
+                <div class="srv-ico cyan">🤖</div>
+                <h3>ChatGPT Automation</h3>
+
+                <p>
+                    AI workflows powered by OpenAI APIs integrated with Gmail, Sheets, CRMs, forms, databases, and custom systems.
+                </p>
+
+                <div class="srv-features">
+                    <div class="srv-feat">Auto email replies & support systems</div>
+                    <div class="srv-feat">AI content generation pipelines</div>
+                    <div class="srv-feat">Lead qualification automation</div>
+                    <div class="srv-feat">AI document processing</div>
+                    <div class="srv-feat">CRM & webhook integrations</div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag c">ChatGPT</span>
+                    <span class="tag c">OpenAI API</span>
+                    <span class="tag c">Automation</span>
+                </div>
+            </div>
+
+            <div class="srv fi">
+                <div class="srv-ico purple">🧠</div>
+
+                <h3>Claude AI Systems</h3>
+
+                <p>
+                    Smart AI agents for long-document analysis, business workflows, summarization, and internal automation.
+                </p>
+
+                <div class="srv-features">
+                    <div class="srv-feat">Document summarization</div>
+                    <div class="srv-feat">AI knowledge systems</div>
+                    <div class="srv-feat">PDF & invoice extraction</div>
+                    <div class="srv-feat">Internal AI assistants</div>
+                    <div class="srv-feat">Enterprise workflow automation</div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag p">Claude AI</span>
+                    <span class="tag p">AI Agents</span>
+                    <span class="tag p">PDF AI</span>
+                </div>
+            </div>
+
+            <div class="srv fi">
+                <div class="srv-ico blue">✨</div>
+
+                <h3>Gemini + Google Workspace AI</h3>
+
+                <p>
+                    Native AI automation directly inside Google Workspace including Gmail, Docs, Sheets, and Drive.
+                </p>
+
+                <div class="srv-features">
+                    <div class="srv-feat">Gemini AI in Sheets & Docs</div>
+                    <div class="srv-feat">Apps Script AI workflows</div>
+                    <div class="srv-feat">AI reporting automation</div>
+                    <div class="srv-feat">Smart Google Forms systems</div>
+                    <div class="srv-feat">Workspace AI copilots</div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag b">Gemini</span>
+                    <span class="tag b">Workspace AI</span>
+                    <span class="tag b">Apps Script</span>
+                </div>
+            </div>
+
+            <div class="srv fi">
+                <div class="srv-ico orange">⚡</div>
+
+                <h3>AI + Google Sheets Automation</h3>
+
+                <p>
+                    Intelligent spreadsheet systems that automatically analyze, process, generate, and organize data.
+                </p>
+
+                <div class="srv-features">
+                    <div class="srv-feat">AI formulas & analysis</div>
+                    <div class="srv-feat">Automated dashboards</div>
+                    <div class="srv-feat">Live AI reporting systems</div>
+                    <div class="srv-feat">Auto-generated summaries</div>
+                    <div class="srv-feat">API connected spreadsheets</div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag o">Google Sheets</span>
+                    <span class="tag o">Automation</span>
+                    <span class="tag o">AI Reporting</span>
+                </div>
+            </div>
+
+            <div class="srv fi">
+                <div class="srv-ico rose">🚀</div>
+
+                <h3>AI Agents & Workflows</h3>
+
+                <p>
+                    Multi-step autonomous AI systems connected with APIs, CRMs, databases, and cloud infrastructure.
+                </p>
+
+                <div class="srv-features">
+                    <div class="srv-feat">Autonomous AI workflows</div>
+                    <div class="srv-feat">API-connected AI agents</div>
+                    <div class="srv-feat">AI CRM integrations</div>
+                    <div class="srv-feat">Webhook automation systems</div>
+                    <div class="srv-feat">Business process AI</div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag r">AI Agents</span>
+                    <span class="tag r">APIs</span>
+                    <span class="tag r">Automation</span>
+                </div>
+            </div>
+
+            <div class="srv fi">
+                <div class="srv-ico green">🛠️</div>
+
+                <h3>Full Stack AI Integration</h3>
+
+                <p>
+                    End-to-end AI infrastructure combining frontend apps, backend APIs, automation tools, and cloud deployment.
+                </p>
+
+                <div class="srv-features">
+                    <div class="srv-feat">Custom AI dashboards</div>
+                    <div class="srv-feat">Cloud AI deployment</div>
+                    <div class="srv-feat">Database integrations</div>
+                    <div class="srv-feat">Realtime AI workflows</div>
+                    <div class="srv-feat">Scalable AI infrastructure</div>
+                </div>
+
+                <div class="tags">
+                    <span class="tag g">Cloud AI</span>
+                    <span class="tag g">Full Stack</span>
+                    <span class="tag g">Deployment</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
     <!-- INDUSTRIES -->
     <section class="industries" id="industries">
         <div class="c">
@@ -876,6 +1146,15 @@
                 <div class="plat fi"><span class="pi">📧</span>Exchange Server</div>
                 <div class="plat fi"><span class="pi">🐧</span>Linux</div>
                 <div class="plat fi"><span class="pi">🗄️</span>BigQuery</div>
+
+                <div class="plat fi"><span class="pi">🤖</span>ChatGPT</div>
+                <div class="plat fi"><span class="pi">🧠</span>Claude AI</div>
+                <div class="plat fi"><span class="pi">✨</span>Gemini AI</div>
+                <div class="plat fi"><span class="pi">🚀</span>Grok AI</div>
+                <div class="plat fi"><span class="pi">🔗</span>n8n</div>
+                <div class="plat fi"><span class="pi">⚡</span>Make.com</div>
+                <div class="plat fi"><span class="pi">🟢</span>Node.js</div>
+                <div class="plat fi"><span class="pi">🔥</span>Firebase</div>               
             </div>
         </div>
     </section>
@@ -962,6 +1241,24 @@
     fixMobile();
     window.addEventListener('resize',fixMobile);
 </script>
+<script>
+/* THEME TOGGLE */
+const themeToggle=document.getElementById('themeToggle');
 
+if(localStorage.getItem('theme')==='light'){
+    document.body.classList.add('light');
+}
+
+themeToggle.addEventListener('click',()=>{
+    document.body.classList.toggle('light');
+
+    if(document.body.classList.contains('light')){
+        localStorage.setItem('theme','light');
+    }else{
+        localStorage.setItem('theme','dark');
+    }
+});
+</script>
+    
 </body>
 </html>

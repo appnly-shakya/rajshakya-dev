@@ -825,6 +825,233 @@ body:not(.light) .sun{display:none}
 
 }
 
+
+        /* =========================
+   PERFECT MOBILE FIX
+========================= */
+
+@media (max-width: 768px){
+
+    html,
+    body{
+        overflow-x:hidden !important;
+        width:100%;
+    }
+
+    .c{
+        width:100%;
+        max-width:100%;
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    /* HERO */
+    .hero{
+        padding-top:110px !important;
+        padding-bottom:60px !important;
+    }
+
+    .hero-wrap{
+        grid-template-columns:1fr !important;
+        gap:40px !important;
+    }
+
+    .hero-left,
+    .hero-right{
+        width:100%;
+        max-width:100%;
+    }
+
+    /* TITLE */
+    .hero h1{
+        font-size:46px !important;
+        line-height:1.02 !important;
+        letter-spacing:-2px !important;
+        word-break:break-word;
+        overflow-wrap:break-word;
+        max-width:100%;
+    }
+
+    .hero h1 br{
+        display:none;
+    }
+
+    /* HERO TEXT */
+    .hero-p{
+        font-size:16px !important;
+        line-height:1.8 !important;
+        max-width:100%;
+    }
+
+    /* BADGE */
+    .badge{
+        width:100%;
+        justify-content:center;
+        text-align:center;
+        font-size:11px;
+        line-height:1.5;
+        padding:10px 14px;
+    }
+
+    /* BUTTONS */
+    .hero-btns{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .btn1,
+    .btn2,
+    .btn-cal{
+        width:100%;
+        justify-content:center;
+        min-height:56px;
+        font-size:15px !important;
+    }
+
+    /* AUTOMATION PANEL */
+    .automation-ui{
+        width:100%;
+        min-height:auto !important;
+        padding:20px !important;
+        border-radius:22px;
+        overflow:hidden;
+    }
+
+    /* FLOW CARDS */
+    .flow-card{
+        padding:16px !important;
+        gap:14px;
+        border-radius:16px;
+    }
+
+    .flow-card h4{
+        font-size:15px !important;
+    }
+
+    .flow-card p{
+        font-size:12px !important;
+    }
+
+    .flow-icon{
+        width:44px;
+        height:44px;
+        font-size:20px;
+        flex-shrink:0;
+    }
+
+    /* FLOATING AI */
+    .float-ai{
+        display:none !important;
+    }
+
+    /* LOGS */
+    .live-logs{
+        margin-top:22px;
+    }
+
+    .log{
+        font-size:12px;
+        padding:10px 12px;
+    }
+
+    /* TRUST BAR */
+    .trust-row{
+        gap:10px;
+    }
+
+    .trust-item{
+        width:calc(50% - 5px);
+        justify-content:center;
+        font-size:13px;
+        padding:12px;
+    }
+
+    /* BEFORE AFTER */
+    .before-after{
+        padding:50px 0;
+    }
+
+    .ba-grid{
+        grid-template-columns:1fr !important;
+        gap:24px;
+    }
+
+    .ba-card{
+        padding:24px;
+    }
+
+    .ba-card h3{
+        font-size:28px;
+    }
+
+    .ai-core{
+        width:130px;
+        height:130px;
+        font-size:18px;
+    }
+
+    /* IMPACT */
+    .impact-grid{
+        grid-template-columns:1fr !important;
+    }
+
+    .impact-card{
+        padding:24px;
+    }
+
+    .impact-title{
+        font-size:24px;
+    }
+
+    .impact-quote{
+        font-size:18px;
+        line-height:1.7;
+    }
+
+    /* SERVICES */
+    .srv-g{
+        grid-template-columns:1fr !important;
+    }
+
+    .srv{
+        padding:24px;
+    }
+
+    /* INDUSTRIES */
+    .ind-g{
+        grid-template-columns:1fr 1fr;
+    }
+
+    /* RESULTS */
+    .res-g{
+        grid-template-columns:1fr;
+    }
+
+    /* PLATFORMS */
+    .plat-g{
+        gap:10px;
+    }
+
+    .plat{
+        width:calc(50% - 5px);
+        justify-content:center;
+        text-align:center;
+    }
+
+    /* TRUST */
+    .trust-g{
+        grid-template-columns:1fr;
+    }
+
+    /* FOOTER */
+    footer .c{
+        flex-direction:column;
+        gap:20px;
+        text-align:center;
+    }
+
+}
+
         
         /* STATS */
         .stats{padding:70px 0;border-top:1px solid var(--border-s);border-bottom:1px solid var(--border-s);position:relative;z-index:1}

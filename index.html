@@ -213,8 +213,15 @@ body:not(.light) .sun{display:none}
     }
 }
         
-        *{margin:0;padding:0;box-sizing:border-box}
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            max-width:100%;
+        }
         html{scroll-behavior:smooth}
+
+        
 
         body{
             font-family:'Outfit',sans-serif;
@@ -274,7 +281,7 @@ body:not(.light) .sun{display:none}
         .mob-btn{display:none;background:none;border:none;color:var(--t1);font-size:24px;cursor:pointer}
 
         /* HERO */
-        .hero{padding:180px 0 120px;position:relative;z-index:1;overflow:visible}
+        .hero{padding:180px 0 120px;position:relative;z-index:1}
         .hero::before{
             content:'';position:absolute;top:-400px;right:-300px;width:900px;height:900px;
             background:radial-gradient(circle,var(--acc-g) 0%,transparent 60%);pointer-events:none;

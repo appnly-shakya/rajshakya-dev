@@ -278,7 +278,6 @@ body:not(.light) .sun{display:none}
             transition:all .2s!important;letter-spacing:0!important;
         }
         .nav-cta:hover{transform:translateY(-1px);box-shadow:0 6px 24px var(--acc-g)}
-        .mob-btn{display:none;background:none;border:none;color:var(--t1);font-size:24px;cursor:pointer}
 
 
         /* MOBILE NAV */
@@ -1412,7 +1411,7 @@ body:not(.light) .sun{display:none}
                 <li><a href="#platforms">Stack</a></li>
                 <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
             </ul>
-            <button class="mob-btn" onclick="document.getElementById('navL').classList.toggle('open')" aria-label="Menu">☰</button>
+<button class="mob-btn" id="mobBtn" aria-label="Menu">☰</button>        
         </div>
     </nav>
 
@@ -2309,6 +2308,66 @@ mobBtn.addEventListener('click', () => {
 });
 
 </script>
-    
+    <script>
+
+const mobBtn = document.getElementById('mobBtn');
+const navL = document.getElementById('navL');
+
+mobBtn.addEventListener('click', () => {
+
+    navL.classList.toggle('open');
+
+    if(navL.classList.contains('open')){
+        mobBtn.innerHTML = '✕';
+    } else {
+        mobBtn.innerHTML = '☰';
+    }
+
+});
+
+/* CLOSE MENU WHEN LINK CLICKED */
+document.querySelectorAll('#navL a').forEach(link => {
+
+    link.addEventListener('click', () => {
+
+        navL.classList.remove('open');
+        mobBtn.innerHTML = '☰';
+
+    });
+
+});
+
+</script>
+    <script>
+
+/* MOBILE MENU */
+const mobBtn = document.getElementById('mobBtn');
+const navL = document.getElementById('navL');
+
+mobBtn.addEventListener('click', () => {
+
+    navL.classList.toggle('open');
+
+    if(navL.classList.contains('open')){
+        mobBtn.innerHTML = '✕';
+    } else {
+        mobBtn.innerHTML = '☰';
+    }
+
+});
+
+/* CLOSE MENU ON LINK CLICK */
+document.querySelectorAll('#navL a').forEach(link => {
+
+    link.addEventListener('click', () => {
+
+        navL.classList.remove('open');
+        mobBtn.innerHTML = '☰';
+
+    });
+
+});
+
+</script>
 </body>
 </html>

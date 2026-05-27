@@ -1003,7 +1003,7 @@
         /* Card container for centering */
         .testimonial-viewport {
             position: relative;
-            min-height: 420px;
+            min-height: 480px;
         }
 
         .testimonial-card {
@@ -1271,7 +1271,7 @@
             }
 
             .testimonial-viewport {
-                min-height: 480px;
+                min-height: 560px;
             }
 
             .testimonial-inner {
@@ -1312,6 +1312,15 @@
                 width: 46px;
                 height: 46px;
                 font-size: 18px;
+            }
+
+            .t-dots {
+                gap: 7px;
+            }
+
+            .t-dot {
+                width: 8px;
+                height: 8px;
             }
         }
 
@@ -1413,6 +1422,11 @@
                 border-radius:20px;
                 overflow:hidden;
                 margin-top:10px;
+                text-align:center;
+            }
+
+            .live-pill{
+                justify-content:center;
             }
 
             /* FLOW CARDS */
@@ -1420,6 +1434,10 @@
                 padding:14px !important;
                 gap:12px;
                 border-radius:14px;
+                justify-content:center;
+                text-align:center;
+                flex-direction:column;
+                align-items:center;
             }
 
             .flow-card h4{
@@ -1453,6 +1471,8 @@
             .log{
                 font-size:11px;
                 padding:10px 12px;
+                justify-content:center;
+                text-align:center;
             }
 
             /* STATS */
@@ -1508,10 +1528,25 @@
 
             .ba-card{
                 padding:22px;
+                text-align:center;
             }
 
             .ba-card h3{
                 font-size:26px;
+                text-align:center;
+            }
+
+            .ba-card ul{
+                align-items:center;
+            }
+
+            .ba-card li{
+                text-align:left;
+            }
+
+            .ba-label{
+                display:inline-flex;
+                margin:0 auto;
             }
 
             .ai-core{
@@ -1527,10 +1562,18 @@
 
             .impact-card{
                 padding:22px;
+                text-align:center;
             }
 
             .impact-title{
                 font-size:22px;
+                text-align:center;
+            }
+
+            .impact-item{
+                flex-direction:column;
+                align-items:center;
+                text-align:center;
             }
 
             /* SERVICES */
@@ -1892,7 +1935,7 @@
             <div class="testimonial-track">
                 <div class="testimonial-viewport">
 
-                    <!-- Card 1 -->
+                    <!-- Card 1 — Rodan -->
                     <div class="testimonial-card active" data-index="0">
                         <div class="testimonial-inner">
                             <span class="t-quote-mark">"</span>
@@ -1903,24 +1946,24 @@
                                 <div class="t-star"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="#ffd43b"/></svg></div>
                                 <div class="t-star"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="#ffd43b"/></svg></div>
                             </div>
-                            <p class="t-text">Rajveer was great to work with! He was professional, kind and very responsive throughout the process. He quickly understood the issue, resolved my problem efficiently and made the whole experience smooth and stress free.</p>
+                            <p class="t-text">Rajveer was great to work with! He was professional, kind and very responsive throughout the process. He quickly understood the issue, resolved my problem efficiently and made the whole experience smooth and stress free. I would definitely work with him again — highly recommend.</p>
                             <div class="t-divider"></div>
                             <div class="t-user">
                                 <div class="t-avatar">R</div>
                                 <div class="t-user-info">
                                     <strong>Rodan</strong>
-                                    <span>Business Owner</span>
+                                    <span>Gmail — Google Workspace Issue</span>
                                 </div>
                                 <div class="t-badge">
                                     <svg viewBox="0 0 20 20"><path d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0zm4.2 8.3l-4.5 4.5c-.4.4-1 .4-1.4 0l-2.5-2.5c-.4-.4-.4-1 0-1.4s1-.4 1.4 0L9 10.7l3.8-3.8c.4-.4 1-.4 1.4 0s.4 1 0 1.4z"/></svg>
-                                    Verified
+                                    5.0 ★
                                 </div>
                             </div>
                             <div class="t-progress"><div class="t-progress-bar"></div></div>
                         </div>
                     </div>
 
-                    <!-- Card 2 -->
+                    <!-- Card 2 — Joe -->
                     <div class="testimonial-card" data-index="1">
                         <div class="testimonial-inner">
                             <span class="t-quote-mark">"</span>
@@ -1937,18 +1980,18 @@
                                 <div class="t-avatar">J</div>
                                 <div class="t-user-info">
                                     <strong>Joe</strong>
-                                    <span>Long-term Client</span>
+                                    <span>Google Drive Storage and Sync</span>
                                 </div>
                                 <div class="t-badge">
                                     <svg viewBox="0 0 20 20"><path d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0zm4.2 8.3l-4.5 4.5c-.4.4-1 .4-1.4 0l-2.5-2.5c-.4-.4-.4-1 0-1.4s1-.4 1.4 0L9 10.7l3.8-3.8c.4-.4 1-.4 1.4 0s.4 1 0 1.4z"/></svg>
-                                    Verified
+                                    5.0 ★
                                 </div>
                             </div>
                             <div class="t-progress"><div class="t-progress-bar"></div></div>
                         </div>
                     </div>
 
-                    <!-- Card 3 -->
+                    <!-- Card 3 — Jonathan Ramirez -->
                     <div class="testimonial-card" data-index="2">
                         <div class="testimonial-inner">
                             <span class="t-quote-mark">"</span>
@@ -1959,17 +2002,129 @@
                                 <div class="t-star"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="#ffd43b"/></svg></div>
                                 <div class="t-star"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="#ffd43b"/></svg></div>
                             </div>
-                            <p class="t-text">Raj was professional and helpful at every turn. He was easy to collaborate with and worked diligently to ensure the end result was exactly what we wanted.</p>
+                            <p class="t-text">Raj was professional and helpful at every turn. He was easy to collaborate with and worked diligently to ensure the end result was exactly what we wanted. Thank you!</p>
                             <div class="t-divider"></div>
                             <div class="t-user">
-                                <div class="t-avatar">W</div>
+                                <div class="t-avatar">JR</div>
                                 <div class="t-user-info">
-                                    <strong>Warehouse Inventory Client</strong>
-                                    <span>Automation Project</span>
+                                    <strong>Jonathan Ramirez</strong>
+                                    <span>Warehouse Inventory & Invoicing</span>
                                 </div>
                                 <div class="t-badge">
                                     <svg viewBox="0 0 20 20"><path d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0zm4.2 8.3l-4.5 4.5c-.4.4-1 .4-1.4 0l-2.5-2.5c-.4-.4-.4-1 0-1.4s1-.4 1.4 0L9 10.7l3.8-3.8c.4-.4 1-.4 1.4 0s.4 1 0 1.4z"/></svg>
-                                    Verified
+                                    4.8 ★
+                                </div>
+                            </div>
+                            <div class="t-progress"><div class="t-progress-bar"></div></div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 — Kamali Downey -->
+                    <div class="testimonial-card" data-index="3">
+                        <div class="testimonial-inner">
+                            <span class="t-quote-mark">"</span>
+                            <div class="t-stars">
+                                <div class="t-star"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="#ffd43b"/></svg></div>
+                                <div class="t-star"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="#ffd43b"/></svg></div>
+                                <div class="t-star"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="#ffd43b"/></svg></div>
+                                <div class="t-star"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="#ffd43b"/></svg></div>
+                                <div class="t-star"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="#ffd43b"/></svg></div>
+                            </div>
+                            <p class="t-text">I would work with Rajveer again.</p>
+                            <div class="t-divider"></div>
+                            <div class="t-user">
+                                <div class="t-avatar">KD</div>
+                                <div class="t-user-info">
+                                    <strong>Kamali Downey</strong>
+                                    <span>Outlook to Google Workspace Migration</span>
+                                </div>
+                                <div class="t-badge">
+                                    <svg viewBox="0 0 20 20"><path d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0zm4.2 8.3l-4.5 4.5c-.4.4-1 .4-1.4 0l-2.5-2.5c-.4-.4-.4-1 0-1.4s1-.4 1.4 0L9 10.7l3.8-3.8c.4-.4 1-.4 1.4 0s.4 1 0 1.4z"/></svg>
+                                    5.0 ★
+                                </div>
+                            </div>
+                            <div class="t-progress"><div class="t-progress-bar"></div></div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 — Charles Quintal -->
+                    <div class="testimonial-card" data-index="4">
+                        <div class="testimonial-inner">
+                            <span class="t-quote-mark">"</span>
+                            <div class="t-stars">
+                                <div class="t-star"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="#ffd43b"/></svg></div>
+                                <div class="t-star"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="#ffd43b"/></svg></div>
+                                <div class="t-star"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="#ffd43b"/></svg></div>
+                                <div class="t-star"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="#ffd43b"/></svg></div>
+                                <div class="t-star"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="#ffd43b"/></svg></div>
+                            </div>
+                            <p class="t-text">Rajveer is highly competent, effective and great to work with!</p>
+                            <div class="t-divider"></div>
+                            <div class="t-user">
+                                <div class="t-avatar">CQ</div>
+                                <div class="t-user-info">
+                                    <strong>Charles Quintal</strong>
+                                    <span>Clean Up Google Accounts</span>
+                                </div>
+                                <div class="t-badge">
+                                    <svg viewBox="0 0 20 20"><path d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0zm4.2 8.3l-4.5 4.5c-.4.4-1 .4-1.4 0l-2.5-2.5c-.4-.4-.4-1 0-1.4s1-.4 1.4 0L9 10.7l3.8-3.8c.4-.4 1-.4 1.4 0s.4 1 0 1.4z"/></svg>
+                                    5.0 ★
+                                </div>
+                            </div>
+                            <div class="t-progress"><div class="t-progress-bar"></div></div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 — Shimi Morris -->
+                    <div class="testimonial-card" data-index="5">
+                        <div class="testimonial-inner">
+                            <span class="t-quote-mark">"</span>
+                            <div class="t-stars">
+                                <div class="t-star"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="#ffd43b"/></svg></div>
+                                <div class="t-star"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="#ffd43b"/></svg></div>
+                                <div class="t-star"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="#ffd43b"/></svg></div>
+                                <div class="t-star"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="#ffd43b"/></svg></div>
+                                <div class="t-star"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="#ffd43b"/></svg></div>
+                            </div>
+                            <p class="t-text">Fantastic to work with! Would hire again.</p>
+                            <div class="t-divider"></div>
+                            <div class="t-user">
+                                <div class="t-avatar">SM</div>
+                                <div class="t-user-info">
+                                    <strong>Shimi Morris</strong>
+                                    <span>Google Sheets & Looker Studio Automation</span>
+                                </div>
+                                <div class="t-badge">
+                                    <svg viewBox="0 0 20 20"><path d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0zm4.2 8.3l-4.5 4.5c-.4.4-1 .4-1.4 0l-2.5-2.5c-.4-.4-.4-1 0-1.4s1-.4 1.4 0L9 10.7l3.8-3.8c.4-.4 1-.4 1.4 0s.4 1 0 1.4z"/></svg>
+                                    5.0 ★
+                                </div>
+                            </div>
+                            <div class="t-progress"><div class="t-progress-bar"></div></div>
+                        </div>
+                    </div>
+
+                    <!-- Card 7 — P Mitra -->
+                    <div class="testimonial-card" data-index="6">
+                        <div class="testimonial-inner">
+                            <span class="t-quote-mark">"</span>
+                            <div class="t-stars">
+                                <div class="t-star"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="#ffd43b"/></svg></div>
+                                <div class="t-star"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="#ffd43b"/></svg></div>
+                                <div class="t-star"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="#ffd43b"/></svg></div>
+                                <div class="t-star"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="#ffd43b"/></svg></div>
+                                <div class="t-star"><svg viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z" fill="#ffd43b"/></svg></div>
+                            </div>
+                            <p class="t-text">My experience with Rajveer was quite positive. The project he worked on had some unusual features involving spreadsheet manipulation, and frankly it was quite hard to find anyone to work on this project. Rajveer was able to understand the problem space, and both provide design changes needed to get the work done while accommodating my specific requirements. He communicates well, and I would rehire him for future projects happily.</p>
+                            <div class="t-divider"></div>
+                            <div class="t-user">
+                                <div class="t-avatar">PM</div>
+                                <div class="t-user-info">
+                                    <strong>P Mitra</strong>
+                                    <span>Custom Survey Forms Web App</span>
+                                </div>
+                                <div class="t-badge">
+                                    <svg viewBox="0 0 20 20"><path d="M10 0C4.5 0 0 4.5 0 10s4.5 10 10 10 10-4.5 10-10S15.5 0 10 0zm4.2 8.3l-4.5 4.5c-.4.4-1 .4-1.4 0l-2.5-2.5c-.4-.4-.4-1 0-1.4s1-.4 1.4 0L9 10.7l3.8-3.8c.4-.4 1-.4 1.4 0s.4 1 0 1.4z"/></svg>
+                                    5.0 ★
                                 </div>
                             </div>
                             <div class="t-progress"><div class="t-progress-bar"></div></div>
@@ -1985,6 +2140,10 @@
                         <button class="t-dot active" data-slide="0" aria-label="Slide 1"></button>
                         <button class="t-dot" data-slide="1" aria-label="Slide 2"></button>
                         <button class="t-dot" data-slide="2" aria-label="Slide 3"></button>
+                        <button class="t-dot" data-slide="3" aria-label="Slide 4"></button>
+                        <button class="t-dot" data-slide="4" aria-label="Slide 5"></button>
+                        <button class="t-dot" data-slide="5" aria-label="Slide 6"></button>
+                        <button class="t-dot" data-slide="6" aria-label="Slide 7"></button>
                     </div>
                     <button class="t-nav-btn" id="nextTestimonial" aria-label="Next">→</button>
                 </div>
